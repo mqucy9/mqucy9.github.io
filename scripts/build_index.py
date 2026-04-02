@@ -44,10 +44,11 @@ def load_index():
 def chunk_cards(items):
     cards = []
     for meta in items:
+        img = meta.get("image") or "https://images.unsplash.com/photo-1508387020794-1c76e43a90d1?auto=format&fit=crop&w=900&q=80"
         cards.append(
             f"""
         <div class="card">
-          <div class="img-thumb" style="background-image:url('https://images.unsplash.com/photo-1508387020794-1c76e43a90d1?auto=format&fit=crop&w=900&q=80');"></div>
+          <div class="img-thumb" style="background-image:url('{img}');"></div>
           <h3>{meta['title']}</h3>
           <p>Fresh insight published {meta['created_at'][:16].replace('T',' ')}.</p>
           <a href="posts/{meta['slug']}">Read article</a>

@@ -80,6 +80,7 @@ def render_post_html(title, category_label, body_html):
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="no-referrer-when-downgrade" />
   <title>{title}</title>
   <style>
     body{{margin:0;font-family:"Segoe UI","Inter",system-ui,-apple-system,sans-serif;background:#060a12;color:#e8eef7;line-height:1.7;padding:28px;}}
@@ -90,13 +91,16 @@ def render_post_html(title, category_label, body_html):
     .tag{{display:inline-block;padding:4px 10px;border-radius:999px;border:1px solid rgba(255,255,255,0.12);color:#9ab7d6;font-size:13px;}}
     a{{color:#35c3ff;text-decoration:none;}}
     .ad-inline{{margin:24px 0;padding:12px;border:1px dashed rgba(255,255,255,0.25);border-radius:12px;color:#9ab7d6;text-align:center;}}
+    .hero-img{{width:100%;height:220px;border-radius:12px;background-size:cover;background-position:center;border:1px solid rgba(255,255,255,0.12);margin:14px 0;}}
   </style>
+  <script src="/scripts/ads.js"></script>
 </head>
 <body>
   <div class="page">
     <a href="../">← Back to home</a>
     <p class="tag">{category_label}</p>
     <h1>{title}</h1>
+    <div class="hero-img" style="background-image:url('https://images.unsplash.com/photo-1508387020794-1c76e43a90d1?auto=format&fit=crop&w=1100&q=80');"></div>
     <div class="ad-inline">Ad slot — insert tag</div>
     {body_html}
     <div class="ad-inline">Ad slot — insert tag</div>
@@ -138,6 +142,7 @@ def generate_article(cat_slug, cat_label):
         "category_label": cat_label,
         "slug": filename,
         "created_at": now.isoformat(),
+        "image": f"https://source.unsplash.com/featured/900x600/?{cat_slug}",
     }
 
 
