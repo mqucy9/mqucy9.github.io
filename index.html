@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="1d7555627c6e58b3d3aaaf4b622bd79b7fd13167" content="1d7555627c6e58b3d3aaaf4b622bd79b7fd13167">
-  <title>mqucy9 · Market Intelligence Hub</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Market Intelligence Hub</title>
   <style>
     :root {
       --bg: #050913;
@@ -23,12 +23,10 @@
       margin: 0;
       background: radial-gradient(circle at 20% 20%, #0f1c38 0, #050913 42%), #050913;
       color: var(--text);
-      font-family: "Segoe UI", "Inter", system-ui, -apple-system, sans-serif;
+      font-family: "Segoe UI","Inter",system-ui,-apple-system,sans-serif;
       line-height: 1.7;
       padding: 24px;
     }
-    a { color: var(--accent); text-decoration: none; }
-    a:hover { text-decoration: underline; }
     .page { max-width: 1200px; margin: 0 auto; }
     header.hero {
       padding: 32px;
@@ -36,191 +34,348 @@
       background: linear-gradient(120deg, rgba(25,180,255,0.08), rgba(249,194,60,0.08));
       border: 1px solid rgba(255,255,255,0.06);
       box-shadow: var(--shadow);
-      position: relative;
-      overflow: hidden;
     }
     .hero h1 { margin: 0 0 12px; font-size: 32px; letter-spacing: -0.5px; }
     .hero p { margin: 0; color: var(--muted); }
     .chips { margin-top: 18px; display: flex; flex-wrap: wrap; gap: 8px; }
     .chip {
-      padding: 6px 12px;
-      border-radius: 999px;
-      border: 1px solid rgba(255,255,255,0.08);
-      background: var(--glass);
-      color: var(--muted);
-      font-size: 13px;
+      padding: 6px 12px; border-radius: 999px; border: 1px solid rgba(255,255,255,0.08);
+      background: var(--glass); color: var(--muted); font-size: 13px;
     }
-    section { margin-top: 28px; }
-    .section-title {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 12px;
-      font-weight: 700;
-      letter-spacing: 0.2px;
-    }
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-      gap: var(--grid-gap);
-    }
+    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: var(--grid-gap); }
     .card {
-      background: var(--card);
-      border-radius: var(--radius);
-      padding: 16px;
-      border: 1px solid rgba(255,255,255,0.06);
-      box-shadow: var(--shadow);
-      position: relative;
-      overflow: hidden;
+      background: var(--card); border-radius: var(--radius); padding: 16px;
+      border: 1px solid rgba(255,255,255,0.06); box-shadow: var(--shadow);
     }
-    .card h3 { margin: 0 0 6px; font-size: 18px; }
-    .card p { margin: 0; color: var(--muted); font-size: 14px; }
-    .tag {
-      display: inline-block;
-      padding: 4px 10px;
-      border-radius: 999px;
-      background: rgba(25,180,255,0.12);
-      color: #9ee0ff;
-      font-size: 12px;
-      margin-bottom: 10px;
-    }
-    .links ul { padding-left: 18px; margin: 10px 0; color: var(--muted); }
+    .card h3 { margin: 0 0 8px; font-size: 18px; }
+    .card p { margin: 0 0 10px; color: var(--muted); font-size: 14px; }
+    .links ul { padding-left: 18px; margin: 0; }
     .links li { margin: 4px 0; }
+    .img-thumb {
+      width: 100%; height: 140px; border-radius: 10px; background-size: cover; background-position: center;
+      margin-bottom: 12px; border: 1px solid rgba(255,255,255,0.05);
+    }
+    .section-title { margin: 28px 0 12px; font-weight: 700; letter-spacing: 0.2px; }
     .ads {
-      margin-top: 20px;
-      padding: 14px;
-      border-radius: var(--radius);
-      border: 1px dashed rgba(255,255,255,0.25);
-      background: rgba(255,255,255,0.03);
-      color: var(--muted);
+      margin-top: 20px; padding: 14px; border-radius: var(--radius);
+      border: 1px dashed rgba(255,255,255,0.25); background: rgba(255,255,255,0.03); color: var(--muted);
       text-align: center;
     }
-    .img-thumb {
-      width: 100%;
-      height: 120px;
-      border-radius: 10px;
-      background-size: cover;
-      background-position: center;
-      margin-bottom: 12px;
-      border: 1px solid rgba(255,255,255,0.05);
-    }
-    @media (max-width: 640px) {
-      body { padding: 16px; }
-      .hero h1 { font-size: 26px; }
-      .chips { gap: 6px; }
-    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
   </style>
 </head>
 <body>
+  <!-- AADS sticky popup -->
+  <script src="https://pl29040349.profitablecpmratenetwork.com/97/1f/d0/971fd0b7989a08decf43933949b5884f.js"></script>
   <div class="page">
     <header class="hero">
       <h1>Market Intelligence Hub</h1>
-      <p>Crypto · Commodities · FX · Airdrops · Strategies · Indicators — aggregated from 10 active satellites (01–10).</p>
+      <p>Auto-updated multi-asset intel: gold, BTC/ETH, altcoins, FX, strategies, indicators, airdrops.</p>
       <div class="chips">
-        <a class="chip" href="#gold">Gold</a>
-        <a class="chip" href="#btc">Bitcoin</a>
-        <a class="chip" href="#eth">Ethereum</a>
-        <a class="chip" href="#alts">Altcoins</a>
-        <a class="chip" href="#fx">Forex</a>
-        <a class="chip" href="#strat">Strategies</a>
-        <a class="chip" href="#ind">Indicators</a>
-        <a class="chip" href="#airdrop">Airdrops</a>
+        <a class="chip" href="#gold-commodities">Gold</a>
+        <a class="chip" href="#bitcoin">Bitcoin</a>
+        <a class="chip" href="#ethereum">Ethereum</a>
+        <a class="chip" href="#altcoins-defi">Altcoins</a>
+        <a class="chip" href="#forex">Forex</a>
+        <a class="chip" href="#strategies">Strategies</a>
+        <a class="chip" href="#indicators">Indicators</a>
+        <a class="chip" href="#airdrops">Airdrops</a>
       </div>
     </header>
 
-    <section>
-      <div class="section-title"><span>Spotlights</span><span class="tag">Updated automatically</span></div>
+    
+    <section id="gold-commodities">
+      <div class="section-title"><span>Gold / Commodities</span></div>
       <div class="grid">
-        <div class="card">
-          <div class="img-thumb" style="background-image:url('https://images.unsplash.com/photo-1621761191319-c6fb62004040?auto=format&fit=crop&w=900&q=80');"></div>
-          <span class="tag">Gold / Strategies</span>
-          <h3>web-matrix-site-01</h3>
-          <p>Daily XAU macro, hedging and momentum setups.</p>
-          <div class="links">
-            <ul><li><a href="https://mqucy9.github.io/web-matrix-site-01/">Open site</a></li></ul>
-          </div>
-        </div>
-        <div class="card">
-          <div class="img-thumb" style="background-image:url('https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?auto=format&fit=crop&w=900&q=80');"></div>
-          <span class="tag">Bitcoin / ETH</span>
-          <h3>web-matrix-site-02</h3>
-          <p>On-chain signals, funding, perp basis heatmaps.</p>
-          <div class="links">
-            <ul><li><a href="https://mqucy9.github.io/web-matrix-site-02/">Open site</a></li></ul>
-          </div>
-        </div>
-        <div class="card">
-          <div class="img-thumb" style="background-image:url('https://images.unsplash.com/photo-1508387020794-1c76e43a90d1?auto=format&fit=crop&w=900&q=80');"></div>
-          <span class="tag">Altcoins / Airdrops</span>
-          <h3>web-matrix-site-03</h3>
-          <p>Seasonal rotations, airdrops, testnet checklists.</p>
-          <div class="links">
-            <ul><li><a href="https://mqucy9.github.io/web-matrix-site-03/">Open site</a></li></ul>
-          </div>
-        </div>
-        <div class="card">
-          <div class="img-thumb" style="background-image:url('https://images.unsplash.com/photo-1612198528243-3dd68e9c6374?auto=format&fit=crop&w=900&q=80');"></div>
-          <span class="tag">Forex / Indicators</span>
-          <h3>web-matrix-site-04</h3>
-          <p>DXY, majors, carry, and high-probability indicator packs.</p>
-          <div class="links">
-            <ul><li><a href="https://mqucy9.github.io/web-matrix-site-04/">Open site</a></li></ul>
-          </div>
-        </div>
+        
+      <div class="card">
+        <div class="img-thumb" style="background-image:url('https://images.unsplash.com/photo-1508387020794-1c76e43a90d1?auto=format&fit=crop&w=900&q=80');"></div>
+        <h3>How high will gold go this year? Top 3 predictions about gold prices. - Yahoo Finance</h3>
+        <p>How high will gold go this year? Top 3 predictions about gold prices. - Yahoo Finance. &lt;a href=&quot;https://news.google.com/rss/articles/CBMi2wFBVV95cUxNZm54X0hKQXRRLTFncEpTYmkxN1d1d0M0d2o1VkwydFBJSi1ZSndTU3pCVGRJSzRTQ25DNGx6cDlJRFVlTncwbExhTjdmYWx5eTZ6QjVXcFBNMVg4YnNod2R6ekFscGVNOWxIZ1hWaUZPV2JqbngwVk9JSTliX0NLRVNHZFRtTjhyRDI0UWZzY25yRWNxLTRURF9Hb25jcVR6dl9XWDRwN3hOT3JYa2Z5S09kSlduRC16YXcwTDl5bDBOTkxwWmQ0Ql8wQms4MTVqU3FmQlI1STN5dEU?oc=5&quot; target=&quot;_blank&quot;&gt;How high will gold go this year?</p>
+        <div class="links"><ul><li><a href="https://news.google.com/rss/articles/CBMi2wFBVV95cUxNZm54X0hKQXRRLTFncEpTYmkxN1d1d0M0d2o1VkwydFBJSi1ZSndTU3pCVGRJSzRTQ25DNGx6cDlJRFVlTncwbExhTjdmYWx5eTZ6QjVXcFBNMVg4YnNod2R6ekFscGVNOWxIZ1hWaUZPV2JqbngwVk9JSTliX0NLRVNHZFRtTjhyRDI0UWZzY25yRWNxLTRURF9Hb25jcVR6dl9XWDRwN3hOT3JYa2Z5S09kSlduRC16YXcwTDl5bDBOTkxwWmQ0Ql8wQms4MTVqU3FmQlI1STN5dEU?oc=5" target="_blank" rel="noopener">Read source</a></li></ul></div>
+      </div>
+    
+      <div class="card">
+        <div class="img-thumb" style="background-image:url('https://images.unsplash.com/photo-1508387020794-1c76e43a90d1?auto=format&fit=crop&w=900&q=80');"></div>
+        <h3>Gold (XAU/USD) Price Forecast for Today, Tomorrow, Next Week, and the Next 30 Days - LiteFinance</h3>
+        <p>Gold (XAU/USD) Price Forecast for Today, Tomorrow, Next Week, and the Next 30 Days - LiteFinance. &lt;a href=&quot;https://news.google.com/rss/articles/CBMioAFBVV95cUxOZ1BXeVdPR08tTmQ4MHdZMkloUzlsNjRjSE5VVmxyeVRrdDZqbDI3Tm5VVUdfYTdZM0dOYjkzVFBuMGhJUzZEM3E0RDBkc0RTUXd2VFdMdm5uenpPXzJobUNvRklvRkt0S0pfYkZ0UWRXaWRDc09MR1pBUkVDRXN2Y2FINkVmUDBlRkZHNGhzZkNyNk5LUzZrM2VUV1pVOV9N?oc=5&quot; target=&quot;_blank&quot;&gt;Gold (XAU/USD) Price Forecast for Today, Tomorrow, Next Week, and the Next 30 Days&lt;/a&gt;  &lt;font color=&quot;#6f6f6f&quot;&gt;L</p>
+        <div class="links"><ul><li><a href="https://news.google.com/rss/articles/CBMioAFBVV95cUxOZ1BXeVdPR08tTmQ4MHdZMkloUzlsNjRjSE5VVmxyeVRrdDZqbDI3Tm5VVUdfYTdZM0dOYjkzVFBuMGhJUzZEM3E0RDBkc0RTUXd2VFdMdm5uenpPXzJobUNvRklvRkt0S0pfYkZ0UWRXaWRDc09MR1pBUkVDRXN2Y2FINkVmUDBlRkZHNGhzZkNyNk5LUzZrM2VUV1pVOV9N?oc=5" target="_blank" rel="noopener">Read source</a></li></ul></div>
+      </div>
+    
+      <div class="card">
+        <div class="img-thumb" style="background-image:url('https://images.unsplash.com/photo-1508387020794-1c76e43a90d1?auto=format&fit=crop&w=900&q=80');"></div>
+        <h3>Wells Fargo resets gold price target for the rest of 2026 - thestreet.com</h3>
+        <p>Wells Fargo resets gold price target for the rest of 2026 - thestreet.com. &lt;a href=&quot;https://news.google.com/rss/articles/CBMimAFBVV95cUxNc2MzdXhpb1Y5bFl2a2xPNlE3RnNaREpVWmpyU0tyNERzcFJsXzVlNXZITzhFOF80UThuRHVKOWpRMExJbHNCRVBnS0F2WWN2eWV1MXUwQWxrMjlPa05SYUlSLWQ2YnBpaEhhN3FhMnJBUUpKNEVUbE9xSzZQMHc1clBXaDNRQkZaam81TGRfRFNpUk01UkJIcQ?oc=5&quot; target=&quot;_blank&quot;&gt;Wells Fargo resets gold price target for the rest of 2026&lt;/a&gt;  &lt;font color=&quot;#6f6f6f&quot;&gt;thestreet.com&lt;/font&gt;</p>
+        <div class="links"><ul><li><a href="https://news.google.com/rss/articles/CBMimAFBVV95cUxNc2MzdXhpb1Y5bFl2a2xPNlE3RnNaREpVWmpyU0tyNERzcFJsXzVlNXZITzhFOF80UThuRHVKOWpRMExJbHNCRVBnS0F2WWN2eWV1MXUwQWxrMjlPa05SYUlSLWQ2YnBpaEhhN3FhMnJBUUpKNEVUbE9xSzZQMHc1clBXaDNRQkZaam81TGRfRFNpUk01UkJIcQ?oc=5" target="_blank" rel="noopener">Read source</a></li></ul></div>
+      </div>
+    
+      <div class="card">
+        <div class="img-thumb" style="background-image:url('https://images.unsplash.com/photo-1508387020794-1c76e43a90d1?auto=format&fit=crop&w=900&q=80');"></div>
+        <h3>Why Gold Is Going Up? Goldman Gold Price Prediction Sees $5,400 as XAU Rebounds - Finance Magnates</h3>
+        <p>Why Gold Is Going Up? Goldman Gold Price Prediction Sees $5,400 as XAU Rebounds - Finance Magnates. &lt;a href=&quot;https://news.google.com/rss/articles/CBMiugFBVV95cUxNV19Qc2tpZnNfSE1OMW5yYTRYQWtPVjdUc09UVC1FZ1JhQ0NLMFpGU09wa0VYWmhDQk5PcTJlbnhBZGtNdzBjUzR4TEhZS3VpMlFpSW0xTW5WY1hnRTRvQ3VkN1RNamx2aC1ZdVd1RkdmR0pzOGJqSHBpNzJnTXhZU1pvN2oxQlhFTUlGaEZ6MEZLRjZYcENXMTE3ekk2aFNwV2hJVFhjMlhUWnR0YlNmYVgtQkxBbUt6UXfSAb8BQVVfeXFMT2ZpOFRsa0lyUnRwRi1aR0ZhcV9wQWstM1V6Ukx2THZJeFYzeXFHR05Pa192NEVHblN0T003d0ltMmx6YmV0a2</p>
+        <div class="links"><ul><li><a href="https://news.google.com/rss/articles/CBMiugFBVV95cUxNV19Qc2tpZnNfSE1OMW5yYTRYQWtPVjdUc09UVC1FZ1JhQ0NLMFpGU09wa0VYWmhDQk5PcTJlbnhBZGtNdzBjUzR4TEhZS3VpMlFpSW0xTW5WY1hnRTRvQ3VkN1RNamx2aC1ZdVd1RkdmR0pzOGJqSHBpNzJnTXhZU1pvN2oxQlhFTUlGaEZ6MEZLRjZYcENXMTE3ekk2aFNwV2hJVFhjMlhUWnR0YlNmYVgtQkxBbUt6UXfSAb8BQVVfeXFMT2ZpOFRsa0lyUnRwRi1aR0ZhcV9wQWstM1V6Ukx2THZJeFYzeXFHR05Pa192NEVHblN0T003d0ltMmx6YmV0a2xFUi1sdFc2T0VTV1pVOFVxN2xGOEFRWU9pTDN5a1FsWVR1aEx1azZnbXB3bUVtS1lqYmdtS1BfNXVwTEJURmFKV3hFUHVlU1FNaUlIbHF6Q1Q2QVFEUlI2T3FQWW0zd0s1TC1hYkE1NHJYVlZxQmVkdktJMkVXdUE?oc=5" target="_blank" rel="noopener">Read source</a></li></ul></div>
+      </div>
+    
       </div>
     </section>
+    
 
-    <section>
-      <div class="section-title"><span>Active Satellites (01–10)</span></div>
+    <section id="bitcoin">
+      <div class="section-title"><span>Bitcoin</span></div>
       <div class="grid">
-        <div class="card" id="gold">
-          <span class="tag">Gold / Commodities</span>
-          <p>01 · 05 · 10 — hedging, seasonality, intraday levels</p>
-          <div class="links"><ul><li><a href="https://mqucy9.github.io/web-matrix-site-01/">Site 01</a> · <a href="https://mqucy9.github.io/web-matrix-site-05/">Site 05</a> · <a href="https://mqucy9.github.io/web-matrix-site-10/">Site 10</a></li></ul></div>
-        </div>
-        <div class="card" id="btc">
-          <span class="tag">Bitcoin</span>
-          <p>02 — on-chain, funding, perp basis, ETF flows</p>
-          <div class="links"><ul><li><a href="https://mqucy9.github.io/web-matrix-site-02/">Open Site 02</a></li></ul></div>
-        </div>
-        <div class="card" id="eth">
-          <span class="tag">Ethereum / L2</span>
-          <p>03 — staking, gas, rollups, LSD narratives</p>
-          <div class="links"><ul><li><a href="https://mqucy9.github.io/web-matrix-site-03/">Open Site 03</a></li></ul></div>
-        </div>
-        <div class="card" id="alts">
-          <span class="tag">Altcoins / Airdrops</span>
-          <p>08 — rotations, testnets, farming calendars</p>
-          <div class="links"><ul><li><a href="https://mqucy9.github.io/web-matrix-site-08/">Open Site 08</a></li></ul></div>
-        </div>
-        <div class="card" id="strat">
-          <span class="tag">Strategies</span>
-          <p>04 — cross-asset playbooks, position sizing, risk</p>
-          <div class="links"><ul><li><a href="https://mqucy9.github.io/web-matrix-site-04/">Open Site 04</a></li></ul></div>
-        </div>
-        <div class="card" id="ind">
-          <span class="tag">Indicators</span>
-          <p>06 — momentum/vol/breadth indicators, ready to use</p>
-          <div class="links"><ul><li><a href="https://mqucy9.github.io/web-matrix-site-06/">Open Site 06</a></li></ul></div>
-        </div>
-        <div class="card" id="fx">
-          <span class="tag">Forex</span>
-          <p>07 — DXY map, carry, macro calendar highlights</p>
-          <div class="links"><ul><li><a href="https://mqucy9.github.io/web-matrix-site-07/">Open Site 07</a></li></ul></div>
-        </div>
-        <div class="card" id="airdrop">
-          <span class="tag">Airdrops</span>
-          <p>09 — weekly drop radar and eligibility checklist</p>
-          <div class="links"><ul><li><a href="https://mqucy9.github.io/web-matrix-site-09/">Open Site 09</a></li></ul></div>
-        </div>
+        
+      <div class="card">
+        <div class="img-thumb" style="background-image:url('https://images.unsplash.com/photo-1508387020794-1c76e43a90d1?auto=format&fit=crop&w=900&q=80');"></div>
+        <h3>Morgan Stanley&#x27;s Bitcoin ETF Gets Official Listing Announcement By NYSE: Analyst Says This &#x27;Typically&#x27; Means Launch Imminent - Yahoo Finance</h3>
+        <p>Morgan Stanley&#x27;s Bitcoin ETF Gets Official Listing Announcement By NYSE: Analyst Says This &#x27;Typically&#x27; Means Launch Imminent - Yahoo Finance. &lt;a href=&quot;https://news.google.com/rss/articles/CBMingFBVV95cUxQTG85Um9FeVhJXzBhUkJHWUg2N05TTU1xckhQNF8tVWFwMk5yQjBmY1ZPQlpMR2dlVndXNDFpdFBGa0VtemczOV9ZaWw0ODlFUDJWUl9FTkp5RDA3X3NUcDdvZWdiREN0TjNuQ0NVRXVrd0dESWlZb1RsT25LUHR1dnE0Z3dhSy1IWHQtYXRUbTNWODFRUndEcENleGFIdw?oc=5&quot; target=&quot;_blank&quot;&gt;Morgan Stanley&#x27;s Bitcoin ETF Gets Official Listing Announcement By NYSE: Analyst Says This &#x27;Typically&#x27; Means Laun</p>
+        <div class="links"><ul><li><a href="https://news.google.com/rss/articles/CBMingFBVV95cUxQTG85Um9FeVhJXzBhUkJHWUg2N05TTU1xckhQNF8tVWFwMk5yQjBmY1ZPQlpMR2dlVndXNDFpdFBGa0VtemczOV9ZaWw0ODlFUDJWUl9FTkp5RDA3X3NUcDdvZWdiREN0TjNuQ0NVRXVrd0dESWlZb1RsT25LUHR1dnE0Z3dhSy1IWHQtYXRUbTNWODFRUndEcENleGFIdw?oc=5" target="_blank" rel="noopener">Read source</a></li></ul></div>
+      </div>
+    
+      <div class="card">
+        <div class="img-thumb" style="background-image:url('https://images.unsplash.com/photo-1508387020794-1c76e43a90d1?auto=format&fit=crop&w=900&q=80');"></div>
+        <h3>Morgan Stanley Set To Undercut Bitcoin ETF Rivals With 0.14% Fee Ahead Of Launch - Bitcoin Magazine</h3>
+        <p>Morgan Stanley Set To Undercut Bitcoin ETF Rivals With 0.14% Fee Ahead Of Launch - Bitcoin Magazine. &lt;a href=&quot;https://news.google.com/rss/articles/CBMigAFBVV95cUxPMHpseDdDSTk5Y2gtaXc1S05neDl2Z08tV1BlczlwUG9VbVFWdzkyT01LU2FRLW9FZmZoSUN3Ty1aSUhYbno1dWZSSG5SQUVRM3ZQSGRzN0RjQnM5RkNZY0h4ZWlOaDNDYU9TV3JDYWM1LUtXRXBOVHNkZkVzNEZiYw?oc=5&quot; target=&quot;_blank&quot;&gt;Morgan Stanley Set To Undercut Bitcoin ETF Rivals With 0.14% Fee Ahead Of Launch&lt;/a&gt;  &lt;font color=&quot;#6f6f6f&quot;&gt;Bitcoin Magazine&lt;/font&gt;</p>
+        <div class="links"><ul><li><a href="https://news.google.com/rss/articles/CBMigAFBVV95cUxPMHpseDdDSTk5Y2gtaXc1S05neDl2Z08tV1BlczlwUG9VbVFWdzkyT01LU2FRLW9FZmZoSUN3Ty1aSUhYbno1dWZSSG5SQUVRM3ZQSGRzN0RjQnM5RkNZY0h4ZWlOaDNDYU9TV3JDYWM1LUtXRXBOVHNkZkVzNEZiYw?oc=5" target="_blank" rel="noopener">Read source</a></li></ul></div>
+      </div>
+    
+      <div class="card">
+        <div class="img-thumb" style="background-image:url('https://images.unsplash.com/photo-1508387020794-1c76e43a90d1?auto=format&fit=crop&w=900&q=80');"></div>
+        <h3>Morgan Stanley enters bitcoin ETF race with market-leading low fee - CoinDesk</h3>
+        <p>Morgan Stanley enters bitcoin ETF race with market-leading low fee - CoinDesk. &lt;a href=&quot;https://news.google.com/rss/articles/CBMirwFBVV95cUxOWlBFTEZFWTdhbHlNTHcwa1oyVUtSbWhoRHBCX0xRTUdyUzlDQWFpT01LRGh0czgyUE9GUjhmLUFzaDVhQ1pFcWRtU1lGbFY2OVVUNjRfaUxKRHNlU2pLZUVVQnpVcDZiSV9YVkNCNGNKZGlsZzh3cEtwSkFSeW1STUgzZHNDbFQ4WDJuVlZsSEVrQzdFc25yWUVZMVQxTWJIUU9ZdXJfMnRFT3M0X29J?oc=5&quot; target=&quot;_blank&quot;&gt;Morgan Stanley enters bitcoin ETF race with market-leading low fee&lt;/a&gt;  &lt;font color=&quot;#6f6f6</p>
+        <div class="links"><ul><li><a href="https://news.google.com/rss/articles/CBMirwFBVV95cUxOWlBFTEZFWTdhbHlNTHcwa1oyVUtSbWhoRHBCX0xRTUdyUzlDQWFpT01LRGh0czgyUE9GUjhmLUFzaDVhQ1pFcWRtU1lGbFY2OVVUNjRfaUxKRHNlU2pLZUVVQnpVcDZiSV9YVkNCNGNKZGlsZzh3cEtwSkFSeW1STUgzZHNDbFQ4WDJuVlZsSEVrQzdFc25yWUVZMVQxTWJIUU9ZdXJfMnRFT3M0X29J?oc=5" target="_blank" rel="noopener">Read source</a></li></ul></div>
+      </div>
+    
+      <div class="card">
+        <div class="img-thumb" style="background-image:url('https://images.unsplash.com/photo-1508387020794-1c76e43a90d1?auto=format&fit=crop&w=900&q=80');"></div>
+        <h3>​​Bitcoin price outlook: BTC falls amid ETF outflows and weakening demand - ig.com</h3>
+        <p>​​Bitcoin price outlook: BTC falls amid ETF outflows and weakening demand - ig.com. &lt;a href=&quot;https://news.google.com/rss/articles/CBMisgFBVV95cUxPSGpKZE8tck02MjdQaFlZLVZ1R1ZRSFdLbDB0SDBHWGpjWWNoUlc5OGM2Q3RKbC1kbzVCQjBodW1rMkxITVc3QkwzbFIwUkl1UWl0STh6Mnk2ZWxBYzN0WmRDMUdiNlJzWEdjUGpEd1ZvMTV5MGhSN2VzS3VmRl9JNWRJV0FESlZmazBxZmQ1SVlEY19iOVVjVlBwSEFYT1NFR0oxTGRSNkg2VGMtRE5XZlh3?oc=5&quot; target=&quot;_blank&quot;&gt;​​Bitcoin price outlook: BTC falls amid ETF outflows and weakening demand&lt;/a&gt;  &lt;font co</p>
+        <div class="links"><ul><li><a href="https://news.google.com/rss/articles/CBMisgFBVV95cUxPSGpKZE8tck02MjdQaFlZLVZ1R1ZRSFdLbDB0SDBHWGpjWWNoUlc5OGM2Q3RKbC1kbzVCQjBodW1rMkxITVc3QkwzbFIwUkl1UWl0STh6Mnk2ZWxBYzN0WmRDMUdiNlJzWEdjUGpEd1ZvMTV5MGhSN2VzS3VmRl9JNWRJV0FESlZmazBxZmQ1SVlEY19iOVVjVlBwSEFYT1NFR0oxTGRSNkg2VGMtRE5XZlh3?oc=5" target="_blank" rel="noopener">Read source</a></li></ul></div>
+      </div>
+    
       </div>
     </section>
+    
+
+    <section id="ethereum">
+      <div class="section-title"><span>Ethereum</span></div>
+      <div class="grid">
+        
+      <div class="card">
+        <div class="img-thumb" style="background-image:url('https://images.unsplash.com/photo-1508387020794-1c76e43a90d1?auto=format&fit=crop&w=900&q=80');"></div>
+        <h3>Bitmine Immersion Technologies (BMNR) Announces ETH Holdings Reach 4.732 Million Tokens, and Total Crypto and Total Cash Holdings of $10.7 Billion - PR Newswire</h3>
+        <p>Bitmine Immersion Technologies (BMNR) Announces ETH Holdings Reach 4.732 Million Tokens, and Total Crypto and Total Cash Holdings of $10.7 Billion - PR Newswire. &lt;a href=&quot;https://news.google.com/rss/articles/CBMipAJBVV95cUxPZ1g4Ukh6bFVQT0ZKcUVBbUhVM1JCUHVpcVhwWW5aRmNkMDlrLS1Ycm9DZkozRml5SUd2bUVWb0lYbUtKOFk5T2R6YmhYUzNSei1neHkxNjM0VHVtc3EwbDI0UklkWHJFcVJUNDQzTTF1SkpDSlZ1cC1nM3VVYTBJOEVTV1dnajJLMjREaW5BSEl2aWtCOGhaMzVIOTJRa0RzU0hxYUgteEZSdnllV0lSem1sclZkbm9uOS1YQU9WRFFrNjdKcG1ZSC0tQUpGZUVsVHQ1b1RCTFB3d3BfV2tQT0ppTDg5X2NJdVFVa3B6cVJ0TGkxSzVCVXZYZlpQNE94eHBHWl</p>
+        <div class="links"><ul><li><a href="https://news.google.com/rss/articles/CBMipAJBVV95cUxPZ1g4Ukh6bFVQT0ZKcUVBbUhVM1JCUHVpcVhwWW5aRmNkMDlrLS1Ycm9DZkozRml5SUd2bUVWb0lYbUtKOFk5T2R6YmhYUzNSei1neHkxNjM0VHVtc3EwbDI0UklkWHJFcVJUNDQzTTF1SkpDSlZ1cC1nM3VVYTBJOEVTV1dnajJLMjREaW5BSEl2aWtCOGhaMzVIOTJRa0RzU0hxYUgteEZSdnllV0lSem1sclZkbm9uOS1YQU9WRFFrNjdKcG1ZSC0tQUpGZUVsVHQ1b1RCTFB3d3BfV2tQT0ppTDg5X2NJdVFVa3B6cVJ0TGkxSzVCVXZYZlpQNE94eHBHWld1X3VCUmRhWjRITVpVSWJMenNFWVE4bjRLdVd5RnNF?oc=5" target="_blank" rel="noopener">Read source</a></li></ul></div>
+      </div>
+    
+      <div class="card">
+        <div class="img-thumb" style="background-image:url('https://images.unsplash.com/photo-1508387020794-1c76e43a90d1?auto=format&fit=crop&w=900&q=80');"></div>
+        <h3>Current price of Ethereum for April 1, 2026 - Fortune</h3>
+        <p>Current price of Ethereum for April 1, 2026 - Fortune. &lt;a href=&quot;https://news.google.com/rss/articles/CBMiaEFVX3lxTE5VMHd0ZWpscWp5MXczRGVydUZGcDZTVEkxLTBXbEU3a3Q3YkIwYy1WRF91SF96ejNRWUNlUmgtWkxjdVdXQTJRVnJKNnhzZ00zdV9kMlZZSG5OVENQSzZwUXUxRXEydkFY?oc=5&quot; target=&quot;_blank&quot;&gt;Current price of Ethereum for April 1, 2026&lt;/a&gt;  &lt;font color=&quot;#6f6f6f&quot;&gt;Fortune&lt;/font&gt;</p>
+        <div class="links"><ul><li><a href="https://news.google.com/rss/articles/CBMiaEFVX3lxTE5VMHd0ZWpscWp5MXczRGVydUZGcDZTVEkxLTBXbEU3a3Q3YkIwYy1WRF91SF96ejNRWUNlUmgtWkxjdVdXQTJRVnJKNnhzZ00zdV9kMlZZSG5OVENQSzZwUXUxRXEydkFY?oc=5" target="_blank" rel="noopener">Read source</a></li></ul></div>
+      </div>
+    
+      <div class="card">
+        <div class="img-thumb" style="background-image:url('https://images.unsplash.com/photo-1508387020794-1c76e43a90d1?auto=format&fit=crop&w=900&q=80');"></div>
+        <h3>Ethereum Staking Growth Reduces Supply and Supports Price Outlook - Investing.com</h3>
+        <p>Ethereum Staking Growth Reduces Supply and Supports Price Outlook - Investing.com. &lt;a href=&quot;https://news.google.com/rss/articles/CBMirwFBVV95cUxONi1QSVlBWGFHZU9ubjI3UzJ1VTBiZllpaVZBd3puYVFyM1BPeGI2cDBZMlNYbkQwcXQ3dkRVcWZNTVVMS2pGMVdaek5VN1g5WnlQa1ozNnFiNDNMZHVUWHY5WF9ydkcwaVV0eGpDRUNGUVN0MjVQeWZPMWJTU3RtSGVhckJEYm1EZlVpSWFIeFNVT2ZWOE9sT0JqVXIzVTVadzd0bTZSNlQ3c0xkZ3Y4?oc=5&quot; target=&quot;_blank&quot;&gt;Ethereum Staking Growth Reduces Supply and Supports Price Outlook&lt;/a&gt;  &lt;font color=&quot;#6f6f6f</p>
+        <div class="links"><ul><li><a href="https://news.google.com/rss/articles/CBMirwFBVV95cUxONi1QSVlBWGFHZU9ubjI3UzJ1VTBiZllpaVZBd3puYVFyM1BPeGI2cDBZMlNYbkQwcXQ3dkRVcWZNTVVMS2pGMVdaek5VN1g5WnlQa1ozNnFiNDNMZHVUWHY5WF9ydkcwaVV0eGpDRUNGUVN0MjVQeWZPMWJTU3RtSGVhckJEYm1EZlVpSWFIeFNVT2ZWOE9sT0JqVXIzVTVadzd0bTZSNlQ3c0xkZ3Y4?oc=5" target="_blank" rel="noopener">Read source</a></li></ul></div>
+      </div>
+    
+      <div class="card">
+        <div class="img-thumb" style="background-image:url('https://images.unsplash.com/photo-1508387020794-1c76e43a90d1?auto=format&fit=crop&w=900&q=80');"></div>
+        <h3>Crypto Staking Explained: How It Works, Types, &amp; Risks - britannica.com</h3>
+        <p>Crypto Staking Explained: How It Works, Types, &amp; Risks - britannica.com. &lt;a href=&quot;https://news.google.com/rss/articles/CBMiZkFVX3lxTE1YY3R5SC1jUzVHTHh2RFJHWUtiWDVLTUhYLUtkWFdfSzNlNUlIeTFqUElDLWJ3T0xZeXlST2Z3UVJ4am1FdFF2a0I2U3FUaEl2T0FLeTJoZWc3ZDhXR2RuZHhFZUk3dw?oc=5&quot; target=&quot;_blank&quot;&gt;Crypto Staking Explained: How It Works, Types, &amp; Risks&lt;/a&gt;  &lt;font color=&quot;#6f6f6f&quot;&gt;britannica.com&lt;/font&gt;</p>
+        <div class="links"><ul><li><a href="https://news.google.com/rss/articles/CBMiZkFVX3lxTE1YY3R5SC1jUzVHTHh2RFJHWUtiWDVLTUhYLUtkWFdfSzNlNUlIeTFqUElDLWJ3T0xZeXlST2Z3UVJ4am1FdFF2a0I2U3FUaEl2T0FLeTJoZWc3ZDhXR2RuZHhFZUk3dw?oc=5" target="_blank" rel="noopener">Read source</a></li></ul></div>
+      </div>
+    
+      </div>
+    </section>
+    
+
+    <section id="altcoins-defi">
+      <div class="section-title"><span>Altcoins / DeFi</span></div>
+      <div class="grid">
+        
+      <div class="card">
+        <div class="img-thumb" style="background-image:url('https://images.unsplash.com/photo-1508387020794-1c76e43a90d1?auto=format&fit=crop&w=900&q=80');"></div>
+        <h3>Altcoin Season Index Surges to 49, Signaling a Crucial Market Inflection Point - cryptorank.io</h3>
+        <p>Altcoin Season Index Surges to 49, Signaling a Crucial Market Inflection Point - cryptorank.io. &lt;a href=&quot;https://news.google.com/rss/articles/CBMidkFVX3lxTE13aGdzbXdLMm9FdDV1RnRsWk9fblJoYW9qa0pwVGNlSWExcGZNN3MwWWxOQTZ5WW9YS0ZhQWJ2Z2hJdVhOUnR4R05BQVR4SVlLTW56UE9ub09KTnduZmJ6bmtJU0kxSzVfQ2N1SXAxdU1kWUlXOEE?oc=5&quot; target=&quot;_blank&quot;&gt;Altcoin Season Index Surges to 49, Signaling a Crucial Market Inflection Point&lt;/a&gt;  &lt;font color=&quot;#6f6f6f&quot;&gt;cryptorank.io&lt;/font&gt;</p>
+        <div class="links"><ul><li><a href="https://news.google.com/rss/articles/CBMidkFVX3lxTE13aGdzbXdLMm9FdDV1RnRsWk9fblJoYW9qa0pwVGNlSWExcGZNN3MwWWxOQTZ5WW9YS0ZhQWJ2Z2hJdVhOUnR4R05BQVR4SVlLTW56UE9ub09KTnduZmJ6bmtJU0kxSzVfQ2N1SXAxdU1kWUlXOEE?oc=5" target="_blank" rel="noopener">Read source</a></li></ul></div>
+      </div>
+    
+      <div class="card">
+        <div class="img-thumb" style="background-image:url('https://images.unsplash.com/photo-1508387020794-1c76e43a90d1?auto=format&fit=crop&w=900&q=80');"></div>
+        <h3>The Selective Surge: Navigating the New Era of Altcoin Dominance and ETF Integration - TradingKey</h3>
+        <p>The Selective Surge: Navigating the New Era of Altcoin Dominance and ETF Integration - TradingKey. &lt;a href=&quot;https://news.google.com/rss/articles/CBMizAFBVV95cUxPZ2F6X3VyTExOclRIY1dmT05lMEliV1NzcGJXeDljUFJzXzhmQml3MnpYSHF3eWVLbXVjdkpuaXk3bEJXVHMzVV9mRF8xdl8zb0ZqSW5qNXhCQU02c1owUGwtSjhZZVZFMlpMWjR6cTMxRlM5ZVlyMTRfdGgyTEdKQk9hUWh5RVV0SnhWQzJVUUwyQkZJU2haTlh1clBDX2dPQ3p1dkNNdlg4YWpBQXBnU281Uzd2SzFfVGRmNDR4SnRHOTRzRENDcDZ4cDQ?oc=5&quot; target=&quot;_blank&quot;&gt;The Selective Surge: Navigating the New Era of Altco</p>
+        <div class="links"><ul><li><a href="https://news.google.com/rss/articles/CBMizAFBVV95cUxPZ2F6X3VyTExOclRIY1dmT05lMEliV1NzcGJXeDljUFJzXzhmQml3MnpYSHF3eWVLbXVjdkpuaXk3bEJXVHMzVV9mRF8xdl8zb0ZqSW5qNXhCQU02c1owUGwtSjhZZVZFMlpMWjR6cTMxRlM5ZVlyMTRfdGgyTEdKQk9hUWh5RVV0SnhWQzJVUUwyQkZJU2haTlh1clBDX2dPQ3p1dkNNdlg4YWpBQXBnU281Uzd2SzFfVGRmNDR4SnRHOTRzRENDcDZ4cDQ?oc=5" target="_blank" rel="noopener">Read source</a></li></ul></div>
+      </div>
+    
+      <div class="card">
+        <div class="img-thumb" style="background-image:url('https://images.unsplash.com/photo-1508387020794-1c76e43a90d1?auto=format&fit=crop&w=900&q=80');"></div>
+        <h3>Altcoin Season Index Plummets to 45, Signaling a Stark Shift in Crypto Market Sentiment - MEXC</h3>
+        <p>Altcoin Season Index Plummets to 45, Signaling a Stark Shift in Crypto Market Sentiment - MEXC. &lt;a href=&quot;https://news.google.com/rss/articles/CBMiR0FVX3lxTE5nV3Y2TkdwUWFmUjFfM2tMVXFORlNEOWtVN0xIdHBtY3QtR21aS0xiOVRvM3o1bzRqcmdOSXdBdUJjUk9ISEVz?oc=5&quot; target=&quot;_blank&quot;&gt;Altcoin Season Index Plummets to 45, Signaling a Stark Shift in Crypto Market Sentiment&lt;/a&gt;  &lt;font color=&quot;#6f6f6f&quot;&gt;MEXC&lt;/font&gt;</p>
+        <div class="links"><ul><li><a href="https://news.google.com/rss/articles/CBMiR0FVX3lxTE5nV3Y2TkdwUWFmUjFfM2tMVXFORlNEOWtVN0xIdHBtY3QtR21aS0xiOVRvM3o1bzRqcmdOSXdBdUJjUk9ISEVz?oc=5" target="_blank" rel="noopener">Read source</a></li></ul></div>
+      </div>
+    
+      <div class="card">
+        <div class="img-thumb" style="background-image:url('https://images.unsplash.com/photo-1508387020794-1c76e43a90d1?auto=format&fit=crop&w=900&q=80');"></div>
+        <h3>Over 40% of Altcoins Near All-Time Lows Is This a Crypto Market Warning or Opportunity? - TradingView</h3>
+        <p>Over 40% of Altcoins Near All-Time Lows Is This a Crypto Market Warning or Opportunity? - TradingView. &lt;a href=&quot;https://news.google.com/rss/articles/CBMi3gFBVV95cUxOdGVKT1hYN2pMQnd6NTlvM3RvNWJxQXc3STdOcFpqdElKZ1hGci1fMWtXa29aWWxHd2JSZk16UV9SNE04Vk0tWU0tenJwVnZMT0RKWjZ0clhWcnlMVHIyTnhFeVdaTzEyRW1WcEZqNUE5ZzR1VDRMSHlnOWdJZGpCaVZKbFFXal8yanJySC1sSnBXQnk5NGotYXVtYXUxa0ZWTVhqWU1lT1RlMENNc1NqZXR6MXR1ZVBVTU9WVlh6czhWUHBtV1prTjN6UzIyQUZkaVJYdDBZdGJSTU9CVlE?oc=5&quot; target=&quot;_blank&quot;&gt;Over 40% of Altcoins Near Al</p>
+        <div class="links"><ul><li><a href="https://news.google.com/rss/articles/CBMi3gFBVV95cUxOdGVKT1hYN2pMQnd6NTlvM3RvNWJxQXc3STdOcFpqdElKZ1hGci1fMWtXa29aWWxHd2JSZk16UV9SNE04Vk0tWU0tenJwVnZMT0RKWjZ0clhWcnlMVHIyTnhFeVdaTzEyRW1WcEZqNUE5ZzR1VDRMSHlnOWdJZGpCaVZKbFFXal8yanJySC1sSnBXQnk5NGotYXVtYXUxa0ZWTVhqWU1lT1RlMENNc1NqZXR6MXR1ZVBVTU9WVlh6czhWUHBtV1prTjN6UzIyQUZkaVJYdDBZdGJSTU9CVlE?oc=5" target="_blank" rel="noopener">Read source</a></li></ul></div>
+      </div>
+    
+      </div>
+    </section>
+    
+
+    <section id="forex">
+      <div class="section-title"><span>Forex</span></div>
+      <div class="grid">
+        
+      <div class="card">
+        <div class="img-thumb" style="background-image:url('https://images.unsplash.com/photo-1508387020794-1c76e43a90d1?auto=format&fit=crop&w=900&q=80');"></div>
+        <h3>U.S. Dollar Tests Breakout as Fed Cuts Repriced - stonex.com</h3>
+        <p>U.S. Dollar Tests Breakout as Fed Cuts Repriced - stonex.com. &lt;a href=&quot;https://news.google.com/rss/articles/CBMiigFBVV95cUxOeXRKVkc2UUxOTHJKN2E3SEgydUlGS2RmRkhjUEgwc1Fjb0JoVDdwWFg3SWQ2ckJjdFhXMUNuYnh1U3FCcHpHMlp5Zmc3dnZpeGFFVDlHa2ViMWhyVTVPY1A4ZzItRHFVblM0ZEY4b2hSa0dRWDZ6Tm1LeS1WdlhaMkkwR1pNVjhldnc?oc=5&quot; target=&quot;_blank&quot;&gt;U.S. Dollar Tests Breakout as Fed Cuts Repriced&lt;/a&gt;  &lt;font color=&quot;#6f6f6f&quot;&gt;stonex.com&lt;/font&gt;</p>
+        <div class="links"><ul><li><a href="https://news.google.com/rss/articles/CBMiigFBVV95cUxOeXRKVkc2UUxOTHJKN2E3SEgydUlGS2RmRkhjUEgwc1Fjb0JoVDdwWFg3SWQ2ckJjdFhXMUNuYnh1U3FCcHpHMlp5Zmc3dnZpeGFFVDlHa2ViMWhyVTVPY1A4ZzItRHFVblM0ZEY4b2hSa0dRWDZ6Tm1LeS1WdlhaMkkwR1pNVjhldnc?oc=5" target="_blank" rel="noopener">Read source</a></li></ul></div>
+      </div>
+    
+      <div class="card">
+        <div class="img-thumb" style="background-image:url('https://images.unsplash.com/photo-1508387020794-1c76e43a90d1?auto=format&fit=crop&w=900&q=80');"></div>
+        <h3>As US Dollar Index Breaks the 100 Mark, the Global Economy Faces a New Stress Test - Investing.com</h3>
+        <p>As US Dollar Index Breaks the 100 Mark, the Global Economy Faces a New Stress Test - Investing.com. &lt;a href=&quot;https://news.google.com/rss/articles/CBMixAFBVV95cUxNX2dSaE5yX0xGT0xXOWRpX3ozdkVsdjVqWlFtUjM3YU1WSkRDd28xMDR3VUUzd3RCUnk2MndEQnJYMmx3QU9nUl9lUlZYaFd1X2c4SXZYQnNQNFI4MFVScEZzcVVsNGVnMExhSFVzeW5BdWI5VERYOUtvRFRyRHdlaEszN1h2WGh2Y3VKYXZyZ2Z4bDc5R1ZBZjdsd2Fya0JkNTdYWHNqZmpxNXdkZWlQZWZGSmpsQVdvVjV6XzdKdmJwOVds?oc=5&quot; target=&quot;_blank&quot;&gt;As US Dollar Index Breaks the 100 Mark, the Global Economy Face</p>
+        <div class="links"><ul><li><a href="https://news.google.com/rss/articles/CBMixAFBVV95cUxNX2dSaE5yX0xGT0xXOWRpX3ozdkVsdjVqWlFtUjM3YU1WSkRDd28xMDR3VUUzd3RCUnk2MndEQnJYMmx3QU9nUl9lUlZYaFd1X2c4SXZYQnNQNFI4MFVScEZzcVVsNGVnMExhSFVzeW5BdWI5VERYOUtvRFRyRHdlaEszN1h2WGh2Y3VKYXZyZ2Z4bDc5R1ZBZjdsd2Fya0JkNTdYWHNqZmpxNXdkZWlQZWZGSmpsQVdvVjV6XzdKdmJwOVds?oc=5" target="_blank" rel="noopener">Read source</a></li></ul></div>
+      </div>
+    
+      <div class="card">
+        <div class="img-thumb" style="background-image:url('https://images.unsplash.com/photo-1508387020794-1c76e43a90d1?auto=format&fit=crop&w=900&q=80');"></div>
+        <h3>Final Trades: Meta, IBM, CrowdStrike and the ICE U.S. Dollar Index - CNBC</h3>
+        <p>Final Trades: Meta, IBM, CrowdStrike and the ICE U.S. Dollar Index - CNBC. &lt;a href=&quot;https://news.google.com/rss/articles/CBMiqAFBVV95cUxOSjhjZWx4TWs0VjAwSDROZ2dqd2liU3dPQ2VHZG9IdzhQZzFMY1ZRbU9tSXdDbU1CMDd6c01aWE9xVWFuN0pQVjUxTzkwcm9LMmtzaEd5QmMweHpUX2RvbXVDR21nTUctVzBUUzJDM2FKaDJCdGNHRHZIc0JKNE1IbVVOQnpoOWFseVVHcUJqWVp2WWVUX1dIOV9uWGotUWMxT0hLV282d2I?oc=5&quot; target=&quot;_blank&quot;&gt;Final Trades: Meta, IBM, CrowdStrike and the ICE U.S. Dollar Index&lt;/a&gt;  &lt;font color=&quot;#6f6f6f&quot;&gt;CNBC&lt;/</p>
+        <div class="links"><ul><li><a href="https://news.google.com/rss/articles/CBMiqAFBVV95cUxOSjhjZWx4TWs0VjAwSDROZ2dqd2liU3dPQ2VHZG9IdzhQZzFMY1ZRbU9tSXdDbU1CMDd6c01aWE9xVWFuN0pQVjUxTzkwcm9LMmtzaEd5QmMweHpUX2RvbXVDR21nTUctVzBUUzJDM2FKaDJCdGNHRHZIc0JKNE1IbVVOQnpoOWFseVVHcUJqWVp2WWVUX1dIOV9uWGotUWMxT0hLV282d2I?oc=5" target="_blank" rel="noopener">Read source</a></li></ul></div>
+      </div>
+    
+      <div class="card">
+        <div class="img-thumb" style="background-image:url('https://images.unsplash.com/photo-1508387020794-1c76e43a90d1?auto=format&fit=crop&w=900&q=80');"></div>
+        <h3>US Dollar Index (DXY) Price Forecast: Potential double top at 100.60 - FXStreet</h3>
+        <p>US Dollar Index (DXY) Price Forecast: Potential double top at 100.60 - FXStreet. &lt;a href=&quot;https://news.google.com/rss/articles/CBMiqwFBVV95cUxPQWhMTC1sb3F0a25pQzAyTl9kaS14VVVtZUlHZDBXdnVfSUl6R3ZRRlZxVnFlek1JWnFHYVhWS3hUMEJoSDR2YzRHQzJNLTVfOE1NS3RkNzFObkNnZ3dKRkxtTnpmcHYxNWlYdU9uWnVZM2J4bEZhZWRxWm1UV1VfSUxMSjZxUEU5VWc5SC0zSGdrT1hnNnpLaFEyaHkycDM3aGhrdzNVNDBzUEU?oc=5&quot; target=&quot;_blank&quot;&gt;US Dollar Index (DXY) Price Forecast: Potential double top at 100.60&lt;/a&gt;  &lt;font color=&quot;#6f6f6f&quot;&gt;</p>
+        <div class="links"><ul><li><a href="https://news.google.com/rss/articles/CBMiqwFBVV95cUxPQWhMTC1sb3F0a25pQzAyTl9kaS14VVVtZUlHZDBXdnVfSUl6R3ZRRlZxVnFlek1JWnFHYVhWS3hUMEJoSDR2YzRHQzJNLTVfOE1NS3RkNzFObkNnZ3dKRkxtTnpmcHYxNWlYdU9uWnVZM2J4bEZhZWRxWm1UV1VfSUxMSjZxUEU5VWc5SC0zSGdrT1hnNnpLaFEyaHkycDM3aGhrdzNVNDBzUEU?oc=5" target="_blank" rel="noopener">Read source</a></li></ul></div>
+      </div>
+    
+      </div>
+    </section>
+    
+
+    <section id="strategies">
+      <div class="section-title"><span>Strategies</span></div>
+      <div class="grid">
+        
+      <div class="card">
+        <div class="img-thumb" style="background-image:url('https://images.unsplash.com/photo-1508387020794-1c76e43a90d1?auto=format&fit=crop&w=900&q=80');"></div>
+        <h3>SaintQuant Launches AI Crypto Trading Bot Platform, Streamlining Market Analysis &amp; Profitable Strategies - Morningstar</h3>
+        <p>SaintQuant Launches AI Crypto Trading Bot Platform, Streamlining Market Analysis &amp; Profitable Strategies - Morningstar. &lt;a href=&quot;https://news.google.com/rss/articles/CBMi9AFBVV95cUxQalVxa0pFdklabDFqYWQ1ckZSa01QVzdXcHdPYVB2c2ZVTUV3ZC1RbFFlc3RnRUdWLUpXYWJkM2NjOFZrT251WGR2WFI5V2NEYkdkbm0wdFk4WTlibFhOSzQ4aEI5bkVwaHRaQXI1MUhaYWUyb2FacDdYWmN4ejlvN2tkdTZxMDJzSEotcjRoWUJrek5nOWxWNUU0aTMzYmplRVh3SC1BVl9FNmExcS16RElINkZmYlZnQjdWUFRMem8tRkpma2ZmU2daZ0ppd2RUeWZVRWpDbDFlNG9BVldJZWY2WlNNNGVNMFZpZ0lNN2c5dWUx?oc=5&quot; target=&quot;_blank&quot;</p>
+        <div class="links"><ul><li><a href="https://news.google.com/rss/articles/CBMi9AFBVV95cUxQalVxa0pFdklabDFqYWQ1ckZSa01QVzdXcHdPYVB2c2ZVTUV3ZC1RbFFlc3RnRUdWLUpXYWJkM2NjOFZrT251WGR2WFI5V2NEYkdkbm0wdFk4WTlibFhOSzQ4aEI5bkVwaHRaQXI1MUhaYWUyb2FacDdYWmN4ejlvN2tkdTZxMDJzSEotcjRoWUJrek5nOWxWNUU0aTMzYmplRVh3SC1BVl9FNmExcS16RElINkZmYlZnQjdWUFRMem8tRkpma2ZmU2daZ0ppd2RUeWZVRWpDbDFlNG9BVldJZWY2WlNNNGVNMFZpZ0lNN2c5dWUx?oc=5" target="_blank" rel="noopener">Read source</a></li></ul></div>
+      </div>
+    
+      <div class="card">
+        <div class="img-thumb" style="background-image:url('https://images.unsplash.com/photo-1508387020794-1c76e43a90d1?auto=format&fit=crop&w=900&q=80');"></div>
+        <h3>MoneyFlare AI Trading Bot Unveils the Most Profitable Crypto Trading Strategies for Crypto Enthusiasts - markets.businessinsider.com</h3>
+        <p>MoneyFlare AI Trading Bot Unveils the Most Profitable Crypto Trading Strategies for Crypto Enthusiasts - markets.businessinsider.com. &lt;a href=&quot;https://news.google.com/rss/articles/CBMi8wFBVV95cUxPSTdQM05PUTFxQ0NmVGQxSEZKWmlWWG8zT0RVRDFzcVFGWFFNZGlmcmk1c2oxMzBPWFprSUZQRkxJZUQ3bVZfY2JIV3d4TzlDUkQzWHphalNfR0lxT0R1SnlZS2IzZ0pLdG1fUnZDanVfRmNmZ0w0SlpQMTlITTRBRWVhQ0lqQWlQSW1BUkdfR2xMM0lGZ3dBRnBBOXF1NTVLdVRTQ2RTNzBxQ0NBOGZRWHhCSk9aNElmelMyRHo3UWNVUWZOVHpic0dwcFExM2ZheHVMMWpCajRNeUlmX0x0Q0dudTZOdkt1MUY3S0ZIWjdESU0?oc=5&quot; target=&quot;_blank&quot;&gt;</p>
+        <div class="links"><ul><li><a href="https://news.google.com/rss/articles/CBMi8wFBVV95cUxPSTdQM05PUTFxQ0NmVGQxSEZKWmlWWG8zT0RVRDFzcVFGWFFNZGlmcmk1c2oxMzBPWFprSUZQRkxJZUQ3bVZfY2JIV3d4TzlDUkQzWHphalNfR0lxT0R1SnlZS2IzZ0pLdG1fUnZDanVfRmNmZ0w0SlpQMTlITTRBRWVhQ0lqQWlQSW1BUkdfR2xMM0lGZ3dBRnBBOXF1NTVLdVRTQ2RTNzBxQ0NBOGZRWHhCSk9aNElmelMyRHo3UWNVUWZOVHpic0dwcFExM2ZheHVMMWpCajRNeUlmX0x0Q0dudTZOdkt1MUY3S0ZIWjdESU0?oc=5" target="_blank" rel="noopener">Read source</a></li></ul></div>
+      </div>
+    
+      <div class="card">
+        <div class="img-thumb" style="background-image:url('https://images.unsplash.com/photo-1508387020794-1c76e43a90d1?auto=format&fit=crop&w=900&q=80');"></div>
+        <h3>(ECN.DB.A) Trading Performance and Risk Management (ECN.DB.A:CA) - Stock Traders Daily</h3>
+        <p>(ECN.DB.A) Trading Performance and Risk Management (ECN.DB.A:CA) - Stock Traders Daily. &lt;a href=&quot;https://news.google.com/rss/articles/CBMipwFBVV95cUxPMlVXVE5DcGRFd1A5d3BSeXhLLXRlVG9ZQjhvalVBSmRtVnVyVzNoT2V5MWx4ajVyNENSWGd4Umd1Y056UUc5RnlOWE5xbUFrY2VlNGt1Yld0NUI4SFFMYkUtSmFyelE4RWUtM2VaeVN4MlRnVDdsOHFXbzhIM19ydGtBYXJ1WS1NT3pmcHhzZUJ4NEU4MG1DQmVjdjI0NUl5ZTZKR3VEcw?oc=5&quot; target=&quot;_blank&quot;&gt;(ECN.DB.A) Trading Performance and Risk Management (ECN.DB.A:CA)&lt;/a&gt;  &lt;font color=&quot;#6f6f6f&quot;&gt;Stock Tra</p>
+        <div class="links"><ul><li><a href="https://news.google.com/rss/articles/CBMipwFBVV95cUxPMlVXVE5DcGRFd1A5d3BSeXhLLXRlVG9ZQjhvalVBSmRtVnVyVzNoT2V5MWx4ajVyNENSWGd4Umd1Y056UUc5RnlOWE5xbUFrY2VlNGt1Yld0NUI4SFFMYkUtSmFyelE4RWUtM2VaeVN4MlRnVDdsOHFXbzhIM19ydGtBYXJ1WS1NT3pmcHhzZUJ4NEU4MG1DQmVjdjI0NUl5ZTZKR3VEcw?oc=5" target="_blank" rel="noopener">Read source</a></li></ul></div>
+      </div>
+    
+      <div class="card">
+        <div class="img-thumb" style="background-image:url('https://images.unsplash.com/photo-1508387020794-1c76e43a90d1?auto=format&fit=crop&w=900&q=80');"></div>
+        <h3>Nearby BTIC+ on EUR/USD Futures (Feb 2025) Trade Ideas — CME:6EPG2025 - TradingView</h3>
+        <p>Nearby BTIC+ on EUR/USD Futures (Feb 2025) Trade Ideas — CME:6EPG2025 - TradingView. &lt;a href=&quot;https://news.google.com/rss/articles/CBMifEFVX3lxTE1hQ1pnNWdtOTFGbnR1V3lxc0tUbDZkWEdhR2hmdmhCTnAtOEhISkpEN3JBbVpDTnkwRkR3WmRFQ010VWhCNF9DalgybE5mZXFEci1hRDdkQk1UaFNOVXhKOS1POHBSaUxxVnQ3Z3BFVnAzV0RYZk8wYkZMaWs?oc=5&quot; target=&quot;_blank&quot;&gt;Nearby BTIC+ on EUR/USD Futures (Feb 2025) Trade Ideas — CME:6EPG2025&lt;/a&gt;  &lt;font color=&quot;#6f6f6f&quot;&gt;TradingView&lt;/font&gt;</p>
+        <div class="links"><ul><li><a href="https://news.google.com/rss/articles/CBMifEFVX3lxTE1hQ1pnNWdtOTFGbnR1V3lxc0tUbDZkWEdhR2hmdmhCTnAtOEhISkpEN3JBbVpDTnkwRkR3WmRFQ010VWhCNF9DalgybE5mZXFEci1hRDdkQk1UaFNOVXhKOS1POHBSaUxxVnQ3Z3BFVnAzV0RYZk8wYkZMaWs?oc=5" target="_blank" rel="noopener">Read source</a></li></ul></div>
+      </div>
+    
+      </div>
+    </section>
+    
+
+    <section id="indicators">
+      <div class="section-title"><span>Indicators</span></div>
+      <div class="grid">
+        
+      <div class="card">
+        <div class="img-thumb" style="background-image:url('https://images.unsplash.com/photo-1508387020794-1c76e43a90d1?auto=format&fit=crop&w=900&q=80');"></div>
+        <h3>Adaptive Trend Ribbon [JOAT] — Indikator von officialjackofalltrades - TradingView</h3>
+        <p>Adaptive Trend Ribbon [JOAT] — Indikator von officialjackofalltrades - TradingView. &lt;a href=&quot;https://news.google.com/rss/articles/CBMiekFVX3lxTE1ZUXFIMERta0JNTVhpM2prUnZIXzJ4dlZ0Uk52a0FaeDlBd3dOeXFycGI3XzZWTW5lMzVRNi1VTmowOVJKUjBBQnJoa2NQOXhMRUkxZENQWHdTT0E2UTFGcnA0YWYxY3RKNmdqcGprZzNtTFdJYTloTVZR?oc=5&quot; target=&quot;_blank&quot;&gt;Adaptive Trend Ribbon [JOAT] — Indikator von officialjackofalltrades&lt;/a&gt;  &lt;font color=&quot;#6f6f6f&quot;&gt;TradingView&lt;/font&gt;</p>
+        <div class="links"><ul><li><a href="https://news.google.com/rss/articles/CBMiekFVX3lxTE1ZUXFIMERta0JNTVhpM2prUnZIXzJ4dlZ0Uk52a0FaeDlBd3dOeXFycGI3XzZWTW5lMzVRNi1VTmowOVJKUjBBQnJoa2NQOXhMRUkxZENQWHdTT0E2UTFGcnA0YWYxY3RKNmdqcGprZzNtTFdJYTloTVZR?oc=5" target="_blank" rel="noopener">Read source</a></li></ul></div>
+      </div>
+    
+      <div class="card">
+        <div class="img-thumb" style="background-image:url('https://images.unsplash.com/photo-1508387020794-1c76e43a90d1?auto=format&fit=crop&w=900&q=80');"></div>
+        <h3>Market Flow Indicators: Breadth, Liquidity, and the Next Pullback - Bitget</h3>
+        <p>Market Flow Indicators: Breadth, Liquidity, and the Next Pullback - Bitget. &lt;a href=&quot;https://news.google.com/rss/articles/CBMiY0FVX3lxTE02c0pDMjZJaHlSSkdJd1JrT01udkM5ZlZiYm9JbTVOU2dtV2oxRVlOQlZfTjJ3YTdQSEdvZUw0SmhsZXY4NUlhOUNGWUN1VE95U1E2Z2kwMk1yRTRlRWVveU5DRdIBY0FVX3lxTE02c0pDMjZJaHlSSkdJd1JrT01udkM5ZlZiYm9JbTVOU2dtV2oxRVlOQlZfTjJ3YTdQSEdvZUw0SmhsZXY4NUlhOUNGWUN1VE95U1E2Z2kwMk1yRTRlRWVveU5DRQ?oc=5&quot; target=&quot;_blank&quot;&gt;Market Flow Indicators: Breadth, Liquidity, and the Next </p>
+        <div class="links"><ul><li><a href="https://news.google.com/rss/articles/CBMiY0FVX3lxTE02c0pDMjZJaHlSSkdJd1JrT01udkM5ZlZiYm9JbTVOU2dtV2oxRVlOQlZfTjJ3YTdQSEdvZUw0SmhsZXY4NUlhOUNGWUN1VE95U1E2Z2kwMk1yRTRlRWVveU5DRdIBY0FVX3lxTE02c0pDMjZJaHlSSkdJd1JrT01udkM5ZlZiYm9JbTVOU2dtV2oxRVlOQlZfTjJ3YTdQSEdvZUw0SmhsZXY4NUlhOUNGWUN1VE95U1E2Z2kwMk1yRTRlRWVveU5DRQ?oc=5" target="_blank" rel="noopener">Read source</a></li></ul></div>
+      </div>
+    
+      <div class="card">
+        <div class="img-thumb" style="background-image:url('https://images.unsplash.com/photo-1508387020794-1c76e43a90d1?auto=format&fit=crop&w=900&q=80');"></div>
+        <h3>CNN Fear and Greed Index Sits in Extreme Fear Territory - tekedia.com</h3>
+        <p>CNN Fear and Greed Index Sits in Extreme Fear Territory - tekedia.com. &lt;a href=&quot;https://news.google.com/rss/articles/CBMihwFBVV95cUxPT1VmM3VPc1NfUHNza05YamhEX1BVczZpWGF1T1A3U2NENnVzWnloOXVrNm5vTng0ZVNUYTBNbWpaVHlBVFU4UmFEWnA2VUNlX19Td25yNzNFZ01fdXZtSThBWkVfdkpPQkgzSE9CTjVrRjlpc09uNEUza2d6TTcyUDNuQlJSQnc?oc=5&quot; target=&quot;_blank&quot;&gt;CNN Fear and Greed Index Sits in Extreme Fear Territory&lt;/a&gt;  &lt;font color=&quot;#6f6f6f&quot;&gt;tekedia.com&lt;/font&gt;</p>
+        <div class="links"><ul><li><a href="https://news.google.com/rss/articles/CBMihwFBVV95cUxPT1VmM3VPc1NfUHNza05YamhEX1BVczZpWGF1T1A3U2NENnVzWnloOXVrNm5vTng0ZVNUYTBNbWpaVHlBVFU4UmFEWnA2VUNlX19Td25yNzNFZ01fdXZtSThBWkVfdkpPQkgzSE9CTjVrRjlpc09uNEUza2d6TTcyUDNuQlJSQnc?oc=5" target="_blank" rel="noopener">Read source</a></li></ul></div>
+      </div>
+    
+      <div class="card">
+        <div class="img-thumb" style="background-image:url('https://images.unsplash.com/photo-1508387020794-1c76e43a90d1?auto=format&fit=crop&w=900&q=80');"></div>
+        <h3>Market State Analyzer — Indicator by TheScalpingAnt - TradingView</h3>
+        <p>Market State Analyzer — Indicator by TheScalpingAnt - TradingView. &lt;a href=&quot;https://news.google.com/rss/articles/CBMidEFVX3lxTFA5aFd1cmRmYk43UHRZM3lMdjhUYW13LThoQ1Z6Mng4RjY4b0dKb1NLR2VqVTlDelVvYVRZZGhCeG5Ob05oWWNwcFJWTEE3SlRDNTlMYjd2b2p5MUk0ZjRSbVF0NlRYMHE4d0h5R0g1SGlscHB2?oc=5&quot; target=&quot;_blank&quot;&gt;Market State Analyzer — Indicator by TheScalpingAnt&lt;/a&gt;  &lt;font color=&quot;#6f6f6f&quot;&gt;TradingView&lt;/font&gt;</p>
+        <div class="links"><ul><li><a href="https://news.google.com/rss/articles/CBMidEFVX3lxTFA5aFd1cmRmYk43UHRZM3lMdjhUYW13LThoQ1Z6Mng4RjY4b0dKb1NLR2VqVTlDelVvYVRZZGhCeG5Ob05oWWNwcFJWTEE3SlRDNTlMYjd2b2p5MUk0ZjRSbVF0NlRYMHE4d0h5R0g1SGlscHB2?oc=5" target="_blank" rel="noopener">Read source</a></li></ul></div>
+      </div>
+    
+      </div>
+    </section>
+    
+
+    <section id="airdrops">
+      <div class="section-title"><span>Airdrops</span></div>
+      <div class="grid">
+        
+      <div class="card">
+        <div class="img-thumb" style="background-image:url('https://images.unsplash.com/photo-1508387020794-1c76e43a90d1?auto=format&fit=crop&w=900&q=80');"></div>
+        <h3>The Dark Truth Behind &quot;Free&quot; Crypto Airdrops: What Teams Don&#x27;t Want You To Know - Binance</h3>
+        <p>The Dark Truth Behind &quot;Free&quot; Crypto Airdrops: What Teams Don&#x27;t Want You To Know - Binance. &lt;a href=&quot;https://news.google.com/rss/articles/CBMiZEFVX3lxTFBDTzdFRkc0V2hIQU9CSHJZeHVNX1hGX3BxU0x5Z2kyblNWVEx5QlpjNjF4ZDBzWnExVVBKMFp6c2ZON3l5S0I2LWxwT0FLTEhlX0FCOERZUXpSb3RVVEl5ZTNoQkQ?oc=5&quot; target=&quot;_blank&quot;&gt;The Dark Truth Behind &quot;Free&quot; Crypto Airdrops: What Teams Don&#x27;t Want You To Know&lt;/a&gt;  &lt;font color=&quot;#6f6f6f&quot;&gt;Binance&lt;/font&gt;</p>
+        <div class="links"><ul><li><a href="https://news.google.com/rss/articles/CBMiZEFVX3lxTFBDTzdFRkc0V2hIQU9CSHJZeHVNX1hGX3BxU0x5Z2kyblNWVEx5QlpjNjF4ZDBzWnExVVBKMFp6c2ZON3l5S0I2LWxwT0FLTEhlX0FCOERZUXpSb3RVVEl5ZTNoQkQ?oc=5" target="_blank" rel="noopener">Read source</a></li></ul></div>
+      </div>
+    
+      <div class="card">
+        <div class="img-thumb" style="background-image:url('https://images.unsplash.com/photo-1508387020794-1c76e43a90d1?auto=format&fit=crop&w=900&q=80');"></div>
+        <h3>2026 Q2 Outlook: What Are the 10 Most Noteworthy Airdrop Projects? - KuCoin</h3>
+        <p>2026 Q2 Outlook: What Are the 10 Most Noteworthy Airdrop Projects? - KuCoin. &lt;a href=&quot;https://news.google.com/rss/articles/CBMilwFBVV95cUxOTDk5REhlNlB0cUQ2bG5fRjVmOEtGM3YwbnZTQlZHV3FwYlpUSUJFdHk4QlJ4NWI3WU92SVc1c1FJdVc3cVp3RXFyelBrOEdHTXh5c1l6MGxzcTZoLXR5NTlwZERfTElYclZlanFXSXlDY3Z4QWEwODdZOTlkMHVsRzF5SnZFSExCMUxRRkxROWNFb3Z6a0Q4?oc=5&quot; target=&quot;_blank&quot;&gt;2026 Q2 Outlook: What Are the 10 Most Noteworthy Airdrop Projects?&lt;/a&gt;  &lt;font color=&quot;#6f6f6f&quot;&gt;KuCoin&lt;/font&gt;</p>
+        <div class="links"><ul><li><a href="https://news.google.com/rss/articles/CBMilwFBVV95cUxOTDk5REhlNlB0cUQ2bG5fRjVmOEtGM3YwbnZTQlZHV3FwYlpUSUJFdHk4QlJ4NWI3WU92SVc1c1FJdVc3cVp3RXFyelBrOEdHTXh5c1l6MGxzcTZoLXR5NTlwZERfTElYclZlanFXSXlDY3Z4QWEwODdZOTlkMHVsRzF5SnZFSExCMUxRRkxROWNFb3Z6a0Q4?oc=5" target="_blank" rel="noopener">Read source</a></li></ul></div>
+      </div>
+    
+      <div class="card">
+        <div class="img-thumb" style="background-image:url('https://images.unsplash.com/photo-1508387020794-1c76e43a90d1?auto=format&fit=crop&w=900&q=80');"></div>
+        <h3>Eigen Foundation Announces EIGEN Airdrop for Ethereum Restaking Protocol EigenLayer - CoinMarketCap</h3>
+        <p>Eigen Foundation Announces EIGEN Airdrop for Ethereum Restaking Protocol EigenLayer - CoinMarketCap. &lt;a href=&quot;https://news.google.com/rss/articles/CBMiwwFBVV95cUxPQkdWa25VbERhdzZsOGp4WXJRUk5sYXBmcXBJcnhaYmRsVFV3OWNPcXowOWdGMHpkZF8wamUtUjRabWQ3eXQ3a3dmUnJVNThRYUQybzdyUXViX0dRNUJtY0dHNTBuVVBLU3hzS29Helh5d0NBbWJXWS1MdVN4TDRHMjUtRTNyTnBuenQtZVhLYmJzZnFkclU0Q2kwRFpZWlZtXzFldkxFazBqOUF5dGtLR21LWHl3MXpyNHlEcGpNc2pXdmc?oc=5&quot; target=&quot;_blank&quot;&gt;Eigen Foundation Announces EIGEN Airdrop for Ethereum Restaking </p>
+        <div class="links"><ul><li><a href="https://news.google.com/rss/articles/CBMiwwFBVV95cUxPQkdWa25VbERhdzZsOGp4WXJRUk5sYXBmcXBJcnhaYmRsVFV3OWNPcXowOWdGMHpkZF8wamUtUjRabWQ3eXQ3a3dmUnJVNThRYUQybzdyUXViX0dRNUJtY0dHNTBuVVBLU3hzS29Helh5d0NBbWJXWS1MdVN4TDRHMjUtRTNyTnBuenQtZVhLYmJzZnFkclU0Q2kwRFpZWlZtXzFldkxFazBqOUF5dGtLR21LWHl3MXpyNHlEcGpNc2pXdmc?oc=5" target="_blank" rel="noopener">Read source</a></li></ul></div>
+      </div>
+    
+      <div class="card">
+        <div class="img-thumb" style="background-image:url('https://images.unsplash.com/photo-1508387020794-1c76e43a90d1?auto=format&fit=crop&w=900&q=80');"></div>
+        <h3>Crypto Airdrops Explained: Farming, Allocation &amp; Volatility (2026) - Outlook India</h3>
+        <p>Crypto Airdrops Explained: Farming, Allocation &amp; Volatility (2026) - Outlook India. &lt;a href=&quot;https://news.google.com/rss/articles/CBMiygFBVV95cUxQMkY1S2JwdDR5cGNReDB2WmwybG05UGpkNGRYOWQ4Q3hLUHZBRWVfemtuQ0ZtZWU4ZFl2VUtiZW5GbkdMNmp4MmV1MHVNUHAxQmhmbTEzSzdBeHpQMkFvb3Bld3N1MzczWFZuczE0MG9BcHdUUjZGNGF2WUp2bDlORHRNQU1nZFc2Qy1ZUGFoenZ5TGU2UEhGV21RYTg2NUxwWnIzQkNnMlN5OHVPWUhPdlh1Q2laQWpYcXRaa0lLcVJRendXWlRPTWxB?oc=5&quot; target=&quot;_blank&quot;&gt;Crypto Airdrops Explained: Farming, Allocation &amp; Volati</p>
+        <div class="links"><ul><li><a href="https://news.google.com/rss/articles/CBMiygFBVV95cUxQMkY1S2JwdDR5cGNReDB2WmwybG05UGpkNGRYOWQ4Q3hLUHZBRWVfemtuQ0ZtZWU4ZFl2VUtiZW5GbkdMNmp4MmV1MHVNUHAxQmhmbTEzSzdBeHpQMkFvb3Bld3N1MzczWFZuczE0MG9BcHdUUjZGNGF2WUp2bDlORHRNQU1nZFc2Qy1ZUGFoenZ5TGU2UEhGV21RYTg2NUxwWnIzQkNnMlN5OHVPWUhPdlh1Q2laQWpYcXRaa0lLcVJRendXWlRPTWxB?oc=5" target="_blank" rel="noopener">Read source</a></li></ul></div>
+      </div>
+    
+      </div>
+    </section>
+    
 
     <section>
-      <div class="section-title"><span>Ad Slots (reserved)</span></div>
-      <div class="ads">Top sticky: AADS 2432692 (popup) — site-wide.</div>
-      <div class="ads">Mid-content: AADS 2432692 iframe (per article).</div>
-      <div class="ads">Footer: reserved for sponsor banner (728x90 / 970x90).</div>
+      <div class="section-title"><span>Ad Slots</span></div>
+      <div class="ads">Top sticky (AADS 2432692) loaded; mid-content ad appears within each article; footer reserved.</div>
     </section>
   </div>
 </body>
