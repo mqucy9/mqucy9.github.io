@@ -13,7 +13,6 @@
       --text: #e8eef7;
       --muted: #9aabc7;
       --accent: #35c3ff;
-      --accent2: #ffda6a;
       --radius: 14px;
       --shadow: 0 18px 50px rgba(0,0,0,0.35);
       --glass: rgba(255,255,255,0.03);
@@ -21,7 +20,7 @@
     * { box-sizing: border-box; }
     body {
       margin: 0;
-      font-family: "Segoe UI", "Inter", system-ui, -apple-system, sans-serif;
+      font-family: "Segoe UI","Inter",system-ui,-apple-system,sans-serif;
       background: radial-gradient(circle at 20% 20%, #122347 0, #060a12 42%), #060a12;
       color: var(--text);
       line-height: 1.7;
@@ -86,11 +85,7 @@
       background-position: center;
       border: 1px solid var(--border);
     }
-    .card h3 {
-      margin: 0;
-      font-size: 17px;
-      line-height: 1.4;
-    }
+    .card h3 { margin: 0; font-size: 17px; line-height: 1.4; }
     .card p { margin: 0; color: var(--muted); font-size: 14px; }
     .card a {
       margin-top: auto;
@@ -109,19 +104,48 @@
       background: var(--glass);
       text-align: center;
     }
-    footer {
-      margin: 40px 0 10px;
+    .sticky-ad {
+      position: fixed;
+      top: 140px;
+      width: 160px;
+      padding: 10px;
+      background: var(--panel);
+      border: 1px dashed rgba(255,255,255,0.25);
       color: var(--muted);
-      font-size: 13px;
+      border-radius: 10px;
       text-align: center;
+      box-shadow: var(--shadow);
+      z-index: 50;
+    }
+    .sticky-ad.left { left: 12px; }
+    .sticky-ad.right { right: 12px; }
+    .bottom-ad {
+      position: fixed;
+      bottom: 12px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: min(760px, 92vw);
+      padding: 12px;
+      background: var(--panel);
+      border: 1px dashed rgba(255,255,255,0.25);
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: var(--shadow);
+      z-index: 60;
     }
     @media (max-width: 640px) {
       body { padding: 18px; }
       .hero h1 { font-size: 26px; }
+      .sticky-ad { display: none; }
+      .bottom-ad { width: 100%; left: 0; transform: none; border-radius: 0; }
     }
   </style>
 </head>
 <body>
+  <div class="sticky-ad left">Side Ad (160x600)<br>Paste tag</div>
+  <div class="sticky-ad right">Side Ad (160x600)<br>Paste tag</div>
+  <div class="bottom-ad">Bottom Ad Slot — add your script/tag</div>
+
   <div class="page">
     <header class="hero">
       <h1>Market Intelligence Hub</h1>
@@ -149,6 +173,12 @@
           <p>Macro, central-bank demand, miner supply discipline, and ETF flows — a concise map for bullion in the next 12 months.</p>
           <a href="posts/gold-outlook-2026.html">Read article</a>
         </div>
+        <div class="card">
+          <div class="img-thumb" style="background-image:url('https://images.unsplash.com/photo-1567427013953-9b2472b37ce0?auto=format&fit=crop&w=900&q=80');"></div>
+          <h3>Hedging Inflation With Gold: Practical Playbook</h3>
+          <p>Position sizing, rebalancing cadence, and pairing bullion with TIPS or energy to smooth drawdowns.</p>
+          <a href="posts/gold-hedge-playbook.html">Read article</a>
+        </div>
       </div>
     </section>
 
@@ -160,6 +190,12 @@
           <h3>Bitcoin Halving 2026: Strategy Guide</h3>
           <p>Funding rates, miner behavior, and where historical analogs break down in the current liquidity regime.</p>
           <a href="posts/bitcoin-halving-playbook.html">Read article</a>
+        </div>
+        <div class="card">
+          <div class="img-thumb" style="background-image:url('https://images.unsplash.com/photo-1612178537253-5790d4a1c757?auto=format&fit=crop&w=900&q=80');"></div>
+          <h3>Stablecoin Liquidity & BTC Floors</h3>
+          <p>How USDT/USDC growth sets soft floors and which on-chain velocity signals warn of momentum breaks.</p>
+          <a href="posts/bitcoin-liquidity-floors.html">Read article</a>
         </div>
       </div>
     </section>
@@ -173,6 +209,12 @@
           <p>What restaking yields really pay for, and how L2 fee markets shape ETH burn and validator economics.</p>
           <a href="posts/ethereum-restaking-economics.html">Read article</a>
         </div>
+        <div class="card">
+          <div class="img-thumb" style="background-image:url('https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=900&q=80');"></div>
+          <h3>ETH as Settlement Asset</h3>
+          <p>Why settlement demand matters more than "ultrasound money" memes, plus metrics to track real usage.</p>
+          <a href="posts/ethereum-settlement-demand.html">Read article</a>
+        </div>
       </div>
     </section>
 
@@ -184,6 +226,12 @@
           <h3>Altcoin Liquidity Cycles Explained</h3>
           <p>Order-book depth, FDV traps, and rotation timing between L1, L2, and DeFi narratives.</p>
           <a href="posts/altcoin-liquidity-cycles.html">Read article</a>
+        </div>
+        <div class="card">
+          <div class="img-thumb" style="background-image:url('https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=900&q=80');"></div>
+          <h3>Security Checklist for New Tokens</h3>
+          <p>Evaluate lockups, treasury wallets, multisig hygiene, and oracle risk before taking a position.</p>
+          <a href="posts/altcoin-security-checklist.html">Read article</a>
         </div>
       </div>
     </section>
@@ -197,6 +245,12 @@
           <p>Tracking real yield spreads, oil, global PMIs, and options skew to anticipate dollar trend breaks.</p>
           <a href="posts/forex-dollar-pivot.html">Read article</a>
         </div>
+        <div class="card">
+          <div class="img-thumb" style="background-image:url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=900&q=80');"></div>
+          <h3>Carry vs. Volatility: When to Stand Aside</h3>
+          <p>Rule-set to switch between carry baskets and cash when implied vols breach thresholds.</p>
+          <a href="posts/forex-carry-vol.html">Read article</a>
+        </div>
       </div>
     </section>
 
@@ -208,6 +262,12 @@
           <h3>R-Multiple Breakout System</h3>
           <p>Position sizing by volatility units, 3-tier exits, and examples across gold, BTC, and EURUSD.</p>
           <a href="posts/strategy-r-breakout.html">Read article</a>
+        </div>
+        <div class="card">
+          <div class="img-thumb" style="background-image:url('https://images.unsplash.com/photo-1454165205744-3b78555e5572?auto=format&fit=crop&w=900&q=80');"></div>
+          <h3>Event-Driven Playbook</h3>
+          <p>How to prep calendars, set risk budgets, and trade around Fed meetings or CPI without gambling.</p>
+          <a href="posts/strategy-event-driven.html">Read article</a>
         </div>
       </div>
     </section>
@@ -221,6 +281,12 @@
           <p>Using realized/ implied spreads with advance-decline breadth to time risk-on flips.</p>
           <a href="posts/indicators-vol-breadth.html">Read article</a>
         </div>
+        <div class="card">
+          <div class="img-thumb" style="background-image:url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=900&q=80');"></div>
+          <h3>Liquidity Heatmap</h3>
+          <p>Build a cross-asset heatmap (FX basis, stablecoin growth, funding rates) to avoid false breakouts.</p>
+          <a href="posts/indicators-liquidity-heatmap.html">Read article</a>
+        </div>
       </div>
     </section>
 
@@ -232,6 +298,12 @@
           <h3>Airdrop Security Playbook</h3>
           <p>Wallet hygiene, sybil filters, and why rotating keys matters before claiming any token.</p>
           <a href="posts/airdrop-security-playbook.html">Read article</a>
+        </div>
+        <div class="card">
+          <div class="img-thumb" style="background-image:url('https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=900&q=80');"></div>
+          <h3>Best Opportunities This Quarter</h3>
+          <p>Ranking drops by TVL stickiness, real fee payers, and team vesting transparency.</p>
+          <a href="posts/airdrop-opps-q2.html">Read article</a>
         </div>
       </div>
     </section>
