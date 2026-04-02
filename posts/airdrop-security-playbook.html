@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Airdrop Security Playbook</title>
+  <style>
+    body{margin:0;font-family:"Segoe UI","Inter",system-ui,-apple-system,sans-serif;background:#060a12;color:#e8eef7;line-height:1.7;padding:28px;}
+    .page{max-width:880px;margin:0 auto;}
+    p{color:#c2cee4;}
+    .tag{display:inline-block;padding:4px 10px;border-radius:999px;border:1px solid rgba(255,255,255,0.12);color:#9ab7d6;font-size:13px;}
+    a{color:#35c3ff;text-decoration:none;}
+    ul{color:#c2cee4;padding-left:20px;}
+    .ad{margin:24px 0;padding:12px;border:1px dashed rgba(255,255,255,0.25);border-radius:12px;color:#9ab7d6;text-align:center;}
+  </style>
+</head>
+<body>
+  <div class="page">
+    <a href="../">← Back to home</a>
+    <p class="tag">Airdrops</p>
+    <h1>Airdrop Security Playbook</h1>
+    <p><strong>Purpose.</strong> Claiming airdrops should not compromise your main stack. This checklist keeps claims clean, avoids sybil flags, and prevents malicious contracts from draining wallets.</p>
+    <p><strong>Wallet hygiene.</strong></p>
+    <ul>
+      <li>Use a fresh “catch” wallet for claims; fund it only with gas, not with core holdings.</li>
+      <li>Rotate keys quarterly; archive old claim wallets after use.</li>
+      <li>Keep signing devices offline when possible; verify contract addresses through multiple sources.</li>
+    </ul>
+    <div class="ad">Ad slot – insert tag here when ready</div>
+    <p><strong>Smart-contract safety.</strong></p>
+    <ul>
+      <li>Simulate the transaction (Tenderly/Blocknative) before signing; inspect for unexpected approvals.</li>
+      <li>Limit token approvals; prefer permit signatures with narrow scopes and expirations.</li>
+      <li>Revoke approvals weekly using a trusted revoker; log what you revoke.</li>
+    </ul>
+    <p><strong>Avoiding sybil flags.</strong></p>
+    <ul>
+      <li>Do not reuse identical on-chain patterns across multiple wallets (identical timing and bridges).</li>
+      <li>Keep interaction history organic: swaps, bridges, NFT mints across weeks—not a single burst.</li>
+      <li>Avoid moving funds between your own wallets right before snapshot windows.</li>
+    </ul>
+    <p><strong>After claiming.</strong> Swap a small test amount first to ensure token transferability. Move claimed tokens to cold storage only after approvals are revoked. Keep gas for one extra transaction in case you must react quickly.</p>
+    <p><strong>Result.</strong> A secure, repeatable process keeps readers safe and on-site. Clear bullets, zero external redirects, and concise language also improve SEO performance.</p>
+  </div>
+</body>
+</html>
