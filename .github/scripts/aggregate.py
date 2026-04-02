@@ -2,6 +2,7 @@ import os
 import re
 import html
 import requests
+import uuid
 import feedparser
 from datetime import datetime
 from pathlib import Path
