@@ -1,0 +1,37 @@
+name: Aggregate Hub
+
+on:
+  schedule:
+    - cron: "0 */6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with: { fetch-depth: 0 }
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with: { python-version: "3.11" }
+
+      - name: Install deps
+        run: pip install -U google-generativeai feedparser requests
+
+      - name: Generate homepage
+        env:
+          AI_API_KEY: ${{ secrets.AI_API_KEY }}
+          GEMINI_API_KEY: ${{ secrets.AI_API_KEY }}
+        run: python .github/scripts/aggregate.py
+
+      - name: Deploy commit
+        run: |
+          git config user.email "action@github.com"
+          git config user.name "GitHub Action"
+          git add index.html
+          git commit -m "chore: update aggregated homepage" || echo "no changes"
+          git push origin main || true
