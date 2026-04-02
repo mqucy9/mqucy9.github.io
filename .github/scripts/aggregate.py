@@ -10,6 +10,7 @@ import google.generativeai as genai
 
 ROOT = Path(__file__).resolve().parent.parent.parent
 OUT = ROOT / "index.html"
+POSTS_DIR = ROOT / "posts"
 
 META_TOKEN = '1d7555627c6e58b3d3aaaf4b622bd79b7fd13167'
 AD_INJECT_URL = "https://frivolous-priest.com/bb3.Vb0nPT3VpQvMbWm/VdJ_Z/DQ0b2wOvTxI/xrO/DxMx3/LJTjYz5/MqjpEi4dN/D/ED"
@@ -43,20 +44,23 @@ def fetch_items(queries: List[str], max_items: int = 5) -> List[Dict]:
                 image = None
                 if hasattr(entry, "media_content") and entry.media_content:
                     image = entry.media_content[0].get("url")
-                items.append({"title": title, "summary": summary, "link": link, "image": image})
+            items.append({"title": title, "summary": summary, "link": link, "image": image})
         except Exception as e:
             print("feed error", q, e)
     return items[:max_items]
 
 
-def rewrite(text: str, api_key: str) -> str:
+def rewrite(text: str, api_key: str, words: int = 450) -> str:
     if not api_key or not text.strip():
         return text
     try:
         genai.configure(api_key=api_key)
         model = genai.GenerativeModel("gemini-1.5-flash")
-        prompt = f"Rewrite concisely in English, keep key facts, 2-3 sentences: {text}"
-        resp = model.generate_content(prompt, generation_config={"temperature": 0.3})
+        prompt = (
+            f"Rewrite and expand into ~{words} words of ORIGINAL English text, SEO-friendly, no source links. "
+            f"Use H2/H3 with short paragraphs and a bullet list. Source snippet: {text}"
+        )
+        resp = model.generate_content(prompt, generation_config={"temperature": 0.5})
         if resp.text:
             return resp.text.strip()
     except Exception as e:
@@ -83,7 +87,7 @@ def render_card(item):
         <div class="img-thumb" style="background-image:url('{img}');"></div>
         <h3>{html.escape(item['title'])}</h3>
         <p>{html.escape(item.get('summary',''))}</p>
-        <div class="links"><ul><li><a href="{item.get('link','#')}" target="_blank" rel="noopener">Read source</a></li></ul></div>
+        <div class="links"><ul><li><a href="{item.get('local','index.html')}" rel="noopener">Read on site</a></li></ul></div>
       </div>
     """
 
@@ -187,6 +191,36 @@ def build_html(sections_html: str):
 </html>"""
 
 
+def save_article(item: Dict, api_key: str) -> str:
+    """
+    Save a rewritten article to posts/slug.html and return the relative path.
+    """
+    POSTS_DIR.mkdir(parents=True, exist_ok=True)
+    slug_base = re.sub(r"[^a-z0-9]+", "-", item["title"].lower()).strip("-")
+    slug = f"{datetime.now():%Y%m%d}-{slug_base[:50]}-{uuid.uuid4().hex[:6]}"
+    content = rewrite(f"{item['title']}. {item.get('summary','')}", api_key, words=520)
+    img = item.get("image") or "https://images.unsplash.com/photo-1508387020794-1c76e43a90d1?auto=format&fit=crop&w=900&q=80"
+    article_html = f"""<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{html.escape(item['title'])}</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <article style="max-width:900px;margin:40px auto;padding:24px;font-family:'Segoe UI',sans-serif;line-height:1.7;background:#0c1424;color:#e8edf7;border:1px solid rgba(255,255,255,0.08);border-radius:12px;">
+    <h1 style="margin-top:0;">{html.escape(item['title'])}</h1>
+    <img src="{img}" alt="" style="width:100%;border-radius:10px;margin:12px 0;border:1px solid rgba(255,255,255,0.05);">
+    {content}
+  </article>
+</body>
+</html>"""
+    path = POSTS_DIR / f"{slug}.html"
+    path.write_text(article_html, encoding="utf-8")
+    return f"/posts/{slug}.html"
+
+
 def main():
     api_key = os.environ.get("AI_API_KEY") or os.environ.get("GEMINI_API_KEY")
     sections = []
@@ -194,8 +228,9 @@ def main():
         items = fetch_items(queries, max_items=4)
         cards = []
         for it in items:
-            rewritten = rewrite(f"{it['title']}. {it.get('summary','')}", api_key)
+            rewritten = rewrite(f"{it['title']}. {it.get('summary','')}", api_key, words=120)
             it["summary"] = rewritten
+            it["local"] = save_article(it, api_key)
             cards.append(render_card(it))
         sections.append(render(topic, "".join(cards)))
     html_out = build_html("\n".join(sections))
