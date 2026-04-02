@@ -18,6 +18,21 @@ CATEGORIES = [
     ("airdrops", "Airdrops"),
 ]
 
+SITE_NAME = "Quantum Market Pulse"
+SITE_DESC = (
+    "Quantum Market Pulse delivers 5-hour refreshed insights on gold, bitcoin, "
+    "ethereum, altcoins, forex, strategies, indicators, and airdrops with clean "
+    "on-site articles optimized for SEO."
+)
+SITE_KEYWORDS = (
+    "gold forecast, bitcoin analysis, ethereum staking, altcoin research, forex strategy, "
+    "trading indicators, airdrop guide, market insights, crypto news, commodities outlook"
+)
+HERO_LINE = (
+    "AI-assisted, editor-polished briefs refreshed every 5 hours across gold, crypto, "
+    "forex, strategies, indicators, and airdrops—structured for fast reading and strong SEO."
+)
+
 
 def load_index():
     if not os.path.exists(INDEX_JSON):
@@ -66,7 +81,9 @@ def render_page(sections_html):
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="1d7555627c6e58b3d3aaaf4b622bd79b7fd13167" content="1d7555627c6e58b3d3aaaf4b622bd79b7fd13167">
-  <title>Market Intelligence Hub</title>
+  <title>{SITE_NAME}</title>
+  <meta name="description" content="{SITE_DESC}">
+  <meta name="keywords" content="{SITE_KEYWORDS}">
   <style>
     :root {{
       --bg: #060a12;
@@ -216,8 +233,8 @@ def render_page(sections_html):
 
   <div class="page">
     <header class="hero">
-      <h1>Market Intelligence Hub</h1>
-      <p>Fresh, human-edited insights across gold, crypto, forex, and pro trading tactics. No external redirects, clean HTML for SEO.</p>
+      <h1>{SITE_NAME}</h1>
+      <p>{HERO_LINE}</p>
       <nav class="chips">
         <a href="#gold">Gold</a>
         <a href="#bitcoin">Bitcoin</a>
