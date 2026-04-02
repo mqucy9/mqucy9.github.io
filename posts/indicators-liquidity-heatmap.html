@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="no-referrer-when-downgrade" />
   <title>Liquidity Heatmap Indicator</title>
   <style>
     body{margin:0;font-family:"Segoe UI","Inter",system-ui,-apple-system,sans-serif;background:#060a12;color:#e8eef7;line-height:1.7;padding:28px;}
@@ -12,14 +13,17 @@
     a{color:#35c3ff;text-decoration:none;}
     ul{color:#c2cee4;padding-left:20px;}
     .ad-inline{margin:24px 0;padding:12px;border:1px dashed rgba(255,255,255,0.25);border-radius:12px;color:#9ab7d6;text-align:center;}
-  </style>
+      .hero-img{width:100%;height:220px;border-radius:12px;background-size:cover;background-position:center;border:1px solid rgba(255,255,255,0.12);margin:14px 0;}
+</style>
+  <script src="/scripts/ads.js"></script>
 </head>
 <body>
   <div class="page">
-    <a href="../">‚Üê Back to home</a>
+    <a href="../">‚Ü?Back to home</a>
     <p class="tag">Indicators</p>
     <h1>Liquidity Heatmap Indicator</h1>
-    <div class="ad-inline">Ad slot ‚Äî insert tag</div>
+    <div class="hero-img" style="background-image:url('https://source.unsplash.com/featured/900x600/?market');"></div>
+    <div class="ad-inline">Ad slot ‚Ä?insert tag</div>
     <p><strong>Concept.</strong> A cross-asset heatmap shows when liquidity is expanding or contracting. Combine it with trend signals to avoid fake breakouts.</p>
     <p><strong>Inputs.</strong></p>
     <ul>
@@ -29,15 +33,17 @@
       <li>Equity vol: VIX term structure (front vs. 3m).</li>
       <li>Credit: CDX IG spread direction.</li>
     </ul>
-    <div class="ad-inline">Ad slot ‚Äî insert tag</div>
+    <div class="ad-inline">Ad slot ‚Ä?insert tag</div>
     <p><strong>Scoring.</strong></p>
     <ul>
       <li>+1 when each input improves (basis up, supply up, funding near zero, VIX curve in contango, credit tighter).</li>
       <li>-1 when deteriorating. Sum the scores; +3 or higher = expansion, -3 or lower = contraction.</li>
     </ul>
     <p><strong>Usage.</strong> Only take breakout trades when the heatmap is >= +2. In contraction, prefer mean-reversion or stay in cash. Recompute daily; publish the heatmap chart to keep this page fresh for SEO.</p>
-    <div class="ad-inline">Ad slot ‚Äî insert tag</div>
+    <div class="ad-inline">Ad slot ‚Ä?insert tag</div>
     <p>Clear sections, bullet rules, and internal links help search engines index the structure while keeping readers on-site.</p>
   </div>
 </body>
 </html>
+
+

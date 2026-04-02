@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="no-referrer-when-downgrade" />
   <title>Volatility + Breadth Combo</title>
   <style>
     body{margin:0;font-family:"Segoe UI","Inter",system-ui,-apple-system,sans-serif;background:#060a12;color:#e8eef7;line-height:1.7;padding:28px;}
@@ -11,14 +12,17 @@
     .tag{display:inline-block;padding:4px 10px;border-radius:999px;border:1px solid rgba(255,255,255,0.12);color:#9ab7d6;font-size:13px;}
     a{color:#35c3ff;text-decoration:none;}
     ul{color:#c2cee4;padding-left:20px;}
-    .ad{margin:24px 0;padding:12px;border:1px dashed rgba(255,255,255,0.25);border-radius:12px;color:#9ab7d6;text-align:center;}
-  </style>
+    .ad-inline{margin:24px 0;padding:12px;border:1px dashed rgba(255,255,255,0.25);border-radius:12px;color:#9ab7d6;text-align:center;}
+      .hero-img{width:100%;height:220px;border-radius:12px;background-size:cover;background-position:center;border:1px solid rgba(255,255,255,0.12);margin:14px 0;}
+</style>
+  <script src="/scripts/ads.js"></script>
 </head>
 <body>
   <div class="page">
-    <a href="../">‚Üê Back to home</a>
+    <a href="../">‚Ü?Back to home</a>
     <p class="tag">Indicators</p>
     <h1>Volatility + Breadth Combo</h1>
+    <div class="hero-img" style="background-image:url('https://source.unsplash.com/featured/900x600/?market');"></div>
     <p><strong>Why combine them?</strong> Volatility shows stress; breadth shows participation. Together they flag when risk-on shifts are durable versus fake-outs.</p>
     <p><strong>Inputs.</strong></p>
     <ul>
@@ -26,7 +30,7 @@
       <li>Advance/decline breadth or % of assets above 50D MA in your universe (majors, alts, FX pairs).</li>
       <li>Volume/OBV confirmation to filter illiquid pops.</li>
     </ul>
-    <div class="ad">Ad slot ‚Äì insert tag here when ready</div>
+    <div class="ad-inline">Ad slot ‚Ä?insert tag here when ready</div>
     <p><strong>Signal construction.</strong></p>
     <ul>
       <li>Risk-on trigger: IV &gt; RV by &lt;= 5 vol points <em>and</em> breadth rising above 55% of assets over 50D MA.</li>
@@ -43,3 +47,5 @@
   </div>
 </body>
 </html>
+
+

@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="no-referrer-when-downgrade" />
   <title>R-Multiple Breakout System</title>
   <style>
     body{margin:0;font-family:"Segoe UI","Inter",system-ui,-apple-system,sans-serif;background:#060a12;color:#e8eef7;line-height:1.7;padding:28px;}
@@ -11,18 +12,21 @@
     .tag{display:inline-block;padding:4px 10px;border-radius:999px;border:1px solid rgba(255,255,255,0.12);color:#9ab7d6;font-size:13px;}
     a{color:#35c3ff;text-decoration:none;}
     ul{color:#c2cee4;padding-left:20px;}
-    .ad{margin:24px 0;padding:12px;border:1px dashed rgba(255,255,255,0.25);border-radius:12px;color:#9ab7d6;text-align:center;}
+    .ad-inline{margin:24px 0;padding:12px;border:1px dashed rgba(255,255,255,0.25);border-radius:12px;color:#9ab7d6;text-align:center;}
     code{background:rgba(255,255,255,0.06);padding:2px 4px;border-radius:6px;}
-  </style>
+      .hero-img{width:100%;height:220px;border-radius:12px;background-size:cover;background-position:center;border:1px solid rgba(255,255,255,0.12);margin:14px 0;}
+</style>
+  <script src="/scripts/ads.js"></script>
 </head>
 <body>
   <div class="page">
-    <a href="../">‚Üê Back to home</a>
+    <a href="../">‚Ü?Back to home</a>
     <p class="tag">Strategies</p>
     <h1>R-Multiple Breakout System</h1>
+    <div class="hero-img" style="background-image:url('https://source.unsplash.com/featured/900x600/?market');"></div>
     <p><strong>Goal.</strong> A simple, reusable breakout template that scales across gold, BTC, and EURUSD while keeping risk constant.</p>
     <p><strong>Setup.</strong> Use a 20-day Donchian channel for entries and a 10-day channel for exits. Define 1R as 1% of account equity. Position size = (1R / ATR(14)). For instruments with higher volatility (BTC), cap at 0.5R per trade.</p>
-    <div class="ad">Ad slot ‚Äì insert tag here when ready</div>
+    <div class="ad-inline">Ad slot ‚Ä?insert tag here when ready</div>
     <p><strong>Rules.</strong></p>
     <ul>
       <li>Enter long on 20-day high breakout with volume/participation confirmation; enter short on 20-day low break when allowed.</li>
@@ -31,9 +35,11 @@
       <li>Maximum 4 concurrent positions; never more than 2 correlated assets at once.</li>
     </ul>
     <p><strong>Why it works.</strong> Most edge comes from risk discipline, not prediction. The system limits downside, rides occasional fat-tail trends, and is transparent enough for readers and search engines alike.</p>
-    <p><strong>Example sizing.</strong> If BTC ATR(14) = $900 and you trade a $50k account with 1R = $500, size = 500 / 900 ‚âà 0.55 BTC. Round down to 0.5 BTC to respect slippage.</p>
+    <p><strong>Example sizing.</strong> If BTC ATR(14) = $900 and you trade a $50k account with 1R = $500, size = 500 / 900 ‚â?0.55 BTC. Round down to 0.5 BTC to respect slippage.</p>
     <p><strong>Common pitfalls.</strong> Oversizing in thin markets, ignoring correlation (e.g., long BTC and long ETH simultaneously), and skipping exits after news spikes. Keep a weekly review to prune bad habits.</p>
     <p>Use this template as a baseline, then layer your own filters (time-of-day, macro regime, funding) without changing the core math. Clean structure, internal links only, and clear headings keep the page SEO-safe.</p>
   </div>
 </body>
 </html>
+
+
