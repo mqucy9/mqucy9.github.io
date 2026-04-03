@@ -22,6 +22,7 @@ jobs:
           KIMI_API_KEY: ${{ secrets.KIMI_API_KEY }}
           KIMI_API_BASE: ${{ secrets.KIMI_API_BASE }}
           KIMI_MODEL: ${{ secrets.KIMI_MODEL }}
+          AI_API_KEY: ${{ secrets.AI_API_KEY }}
         run: python scripts/generate_articles.py
       - name: Rebuild index
         run: python scripts/build_index.py
