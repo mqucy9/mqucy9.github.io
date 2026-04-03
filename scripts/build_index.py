@@ -1,6 +1,7 @@
 import json
 import os
 from collections import defaultdict
+import re
 
 ROOT = os.path.dirname(os.path.dirname(__file__))
 POSTS_DIR = os.path.join(ROOT, "posts")
@@ -39,6 +40,51 @@ def load_index():
         return []
     with open(INDEX_JSON, "r", encoding="utf-8") as f:
         return json.load(f)
+
+
+def rebuild_index_from_files():
+    items = []
+    tag_to_slug = {
+        "Gold": "gold",
+        "Gold / Commodities": "gold",
+        "Bitcoin": "bitcoin",
+        "Ethereum": "ethereum",
+        "Altcoins / DeFi": "altcoins",
+        "Altcoins": "altcoins",
+        "Forex": "forex",
+        "Strategies": "strategies",
+        "Indicators": "indicators",
+        "Airdrops": "airdrops",
+    }
+    for fname in os.listdir(POSTS_DIR):
+        if not fname.endswith(".html"):
+            continue
+        fpath = os.path.join(POSTS_DIR, fname)
+        with open(fpath, "r", encoding="utf-8", errors="ignore") as f:
+            data = f.read()
+        title = re.search(r"<h1>(.*?)</h1>", data, re.S)
+        tag = re.search(r'<p class="tag">(.*?)</p>', data, re.S)
+        hero = re.search(r"hero-img\" style=\"background-image:url\('([^']+)'", data)
+        created = os.path.getmtime(fpath)
+        created_iso = f"{created}"
+        title = title.group(1).strip() if title else fname
+        label = tag.group(1).strip() if tag else "Misc"
+        slug = fname
+        category = tag_to_slug.get(label, "misc")
+        img = hero.group(1) if hero else "https://source.unsplash.com/featured/900x600/?market"
+        items.append(
+            {
+                "title": title,
+                "category": category,
+                "category_label": label,
+                "slug": slug,
+                "created_at": created_iso,
+                "image": img,
+            }
+        )
+    # newest first
+    items = sorted(items, key=lambda x: x["created_at"], reverse=True)
+    return items
 
 
 def chunk_cards(items):
@@ -262,6 +308,8 @@ def render_page(sections_html):
 
 def main():
     index = load_index()
+    if not index:
+        index = rebuild_index_from_files()
     grouped = defaultdict(list)
     for item in index:
         grouped[item["category"]].append(item)

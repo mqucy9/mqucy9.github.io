@@ -106,7 +106,7 @@ def build_prompt(category_label):
     ).strip()
 
 
-def render_post_html(title, category_label, body_html):
+def render_post_html(title, category_label, body_html, image_url):
     return f"""<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -132,7 +132,7 @@ def render_post_html(title, category_label, body_html):
     <a href="../">← Back to home</a>
     <p class="tag">{category_label}</p>
     <h1>{title}</h1>
-    <div class="hero-img" style="background-image:url('https://images.unsplash.com/photo-1508387020794-1c76e43a90d1?auto=format&fit=crop&w=1100&q=80');"></div>
+    <div class="hero-img" style="background-image:url('{image_url}');"></div>
     <div class="ad-inline">Ad slot — insert tag</div>
     {body_html}
     <div class="ad-inline">Ad slot — insert tag</div>
@@ -163,7 +163,8 @@ def generate_article(cat_slug, cat_label):
                 lines.append(f"<p>{line.strip()}</p>")
     body_html = "\n".join(lines)
     title = f"{cat_label} Insights {now.strftime('%Y-%m-%d %H:%M UTC')}"
-    html = render_post_html(title, cat_label, body_html)
+    image_url = f"https://source.unsplash.com/featured/1100x700/?{cat_slug}"
+    html = render_post_html(title, cat_label, body_html, image_url)
     filename = f"{ts}-{cat_slug}-{uid}.html"
     path = os.path.join(POSTS_DIR, filename)
     with open(path, "w", encoding="utf-8") as f:
@@ -174,7 +175,7 @@ def generate_article(cat_slug, cat_label):
         "category_label": cat_label,
         "slug": filename,
         "created_at": now.isoformat(),
-        "image": f"https://source.unsplash.com/featured/900x600/?{cat_slug}",
+        "image": image_url,
     }
 
 
