@@ -1,5 +1,69 @@
 [
   {
+    "title": "Airdrops Insights 2026-04-03 02:47 UTC",
+    "category": "airdrops",
+    "category_label": "Airdrops",
+    "slug": "202604030247-airdrops-9421c88e.html",
+    "created_at": "2026-04-03T02:47:04.252521+00:00",
+    "image": "https://source.unsplash.com/featured/1100x700/?airdrops"
+  },
+  {
+    "title": "Indicators Insights 2026-04-03 02:47 UTC",
+    "category": "indicators",
+    "category_label": "Indicators",
+    "slug": "202604030247-indicators-e86fa7d8.html",
+    "created_at": "2026-04-03T02:47:04.252401+00:00",
+    "image": "https://source.unsplash.com/featured/1100x700/?indicators"
+  },
+  {
+    "title": "Strategies Insights 2026-04-03 02:47 UTC",
+    "category": "strategies",
+    "category_label": "Strategies",
+    "slug": "202604030247-strategies-b65773ec.html",
+    "created_at": "2026-04-03T02:47:04.252257+00:00",
+    "image": "https://source.unsplash.com/featured/1100x700/?strategies"
+  },
+  {
+    "title": "Forex Insights 2026-04-03 02:47 UTC",
+    "category": "forex",
+    "category_label": "Forex",
+    "slug": "202604030247-forex-0eafb848.html",
+    "created_at": "2026-04-03T02:47:04.252115+00:00",
+    "image": "https://source.unsplash.com/featured/1100x700/?forex"
+  },
+  {
+    "title": "Altcoins / DeFi Insights 2026-04-03 02:47 UTC",
+    "category": "altcoins",
+    "category_label": "Altcoins / DeFi",
+    "slug": "202604030247-altcoins-f3562369.html",
+    "created_at": "2026-04-03T02:47:04.252018+00:00",
+    "image": "https://source.unsplash.com/featured/1100x700/?altcoins"
+  },
+  {
+    "title": "Ethereum Insights 2026-04-03 02:47 UTC",
+    "category": "ethereum",
+    "category_label": "Ethereum",
+    "slug": "202604030247-ethereum-51150361.html",
+    "created_at": "2026-04-03T02:47:04.251917+00:00",
+    "image": "https://source.unsplash.com/featured/1100x700/?ethereum"
+  },
+  {
+    "title": "Bitcoin Insights 2026-04-03 02:47 UTC",
+    "category": "bitcoin",
+    "category_label": "Bitcoin",
+    "slug": "202604030247-bitcoin-ac200bfd.html",
+    "created_at": "2026-04-03T02:47:04.251798+00:00",
+    "image": "https://source.unsplash.com/featured/1100x700/?bitcoin"
+  },
+  {
+    "title": "Gold / Commodities Insights 2026-04-03 02:47 UTC",
+    "category": "gold",
+    "category_label": "Gold / Commodities",
+    "slug": "202604030247-gold-5f9554b0.html",
+    "created_at": "2026-04-03T02:47:04.251629+00:00",
+    "image": "https://source.unsplash.com/featured/1100x700/?gold"
+  },
+  {
     "title": "Airdrops Insights 2026-04-03 02:28 UTC",
     "category": "airdrops",
     "category_label": "Airdrops",
