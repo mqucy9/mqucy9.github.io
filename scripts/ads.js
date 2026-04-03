@@ -1,6 +1,6 @@
 (() => {
   const AD_SRC =
-    "https://gullible-thanks.com/bv3.Va0CPw3wpCvqb/mVVrJUZ/DL0M2NOLT/ITy/NwDzYdxDLoTuYL5cMMjDIV0-NQj/UC";
+    "//compassionate-boot.com/brXRVUszd.G_lb0FYpW/co/se/mX9/ucZwU_lUk/PITjYZ5HMyjEMe0/O/D/k/tpNNjwkUyZMyzTQU5HMIwq";
 
   function injectHeadOnce() {
     if (document.querySelector('script[data-ad-source="main-ad-head"]')) return;
